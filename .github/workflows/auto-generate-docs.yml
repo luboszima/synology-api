@@ -16,7 +16,7 @@ jobs:
       - run: pip install -r requirements.txt
       - name: Get changed files
         id: changed-files
-        uses: tj-actions/changed-files@46
+        uses: tj-actions/changed-files@v46
         with:
           files: |
             api:
