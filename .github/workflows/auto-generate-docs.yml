@@ -14,7 +14,7 @@ jobs:
         with:
           python-version: '3.13'
       - run: pip install -r requirements.txt
-      - name: Get all changed markdown files
+      - name: Get all changed api files
         id: changed-api-files
         uses: tj-actions/changed-files@v46
         with:
@@ -32,8 +32,8 @@ jobs:
           
             python3 docs_parser.py -f "$(basename "$file")"
           done
-          
-          git status
-#      - name: Generate Docs
-#        run: |
-#          python docs_parser.py
+      - name: Commit & Push changes
+        uses: actions-js/push@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          message: 'chore: autogenerate docs ${date}'
