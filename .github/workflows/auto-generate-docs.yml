@@ -6,8 +6,7 @@ on:
       - master
 
 jobs:
-  setup:
-    name: Setup env
+  generate-docs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -15,3 +14,20 @@ jobs:
         with:
           python-version: '3.13'
       - run: pip install -r requirements.txt
+      - name: Get changed files
+        id: changed-files
+        uses: tj-actions/changed-files@46
+        with:
+          files: |
+            api:
+              - synology_api/**
+      - name: Run step if doc file(s) change
+        if: steps.changed-files.outputs.api_any_changed == 'true'
+        env:
+          API_ALL_CHANGED_FILES: ${{ steps.changed-files.outputs.api_all_changed_files }}
+        run: |
+          echo "One or more API file(s) has changed."
+          echo "List all the files that have changed: $DOC_ALL_CHANGED_FILES"
+#      - name: Generate Docs
+#        run: |
+#          python docs_parser.py
