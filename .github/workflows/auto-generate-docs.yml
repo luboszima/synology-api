@@ -36,5 +36,5 @@ jobs:
         uses: actions-js/push@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          message: 'chore: autogenerate docs ${date}'
+          message: 'chore: autogenerate docs'
           branch: "${{ github.head_ref }}"
