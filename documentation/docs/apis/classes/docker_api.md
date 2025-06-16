@@ -58,3 +58,66 @@ This API is not documented yet.
 ---
 
 
+### `search_image`
+
+
+
+---
+
+
+### `list_projects`
+
+
+
+---
+
+
+### `get_project_info`
+
+
+
+---
+
+
+### `start_container`
+
+
+
+---
+
+
+### `stop_container`
+
+
+
+---
+
+
+### `export_container_settings`
+
+
+
+---
+
+
+### `export_container`
+
+
+
+---
+
+
+### `get_logs`
+
+
+
+---
+
+
+### `docker_stats`
+
+
+
+---
+
+
