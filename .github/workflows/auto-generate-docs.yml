@@ -14,16 +14,18 @@ jobs:
         with:
           python-version: '3.13'
       - run: pip install -r requirements.txt
-      - name: Get changed files
-        id: changed-files
+      - name: Get all changed markdown files
+        id: changed-api-files
         uses: tj-actions/changed-files@v46
         with:
+          # Avoid using single or double quotes for multiline patterns
           files: |
-            synology_api/**
-      - name: List all changed files synology_api
-        if: steps.changed-markdown-files.outputs.any_changed == 'true'
+            synology_api/**.py
+
+      - name: List all changed files markdown files
+        if: steps.changed-api-files.outputs.any_changed == 'true'
         env:
-          ALL_CHANGED_FILES: ${{ steps.changed-markdown-files.outputs.all_changed_files }}
+          ALL_CHANGED_FILES: ${{ steps.changed-api-files.outputs.all_changed_files }}
         run: |
           for file in ${ALL_CHANGED_FILES}; do
             echo "$file was changed"
