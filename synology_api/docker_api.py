@@ -114,6 +114,7 @@ class Docker(base_api.BaseApi):
 
         return self.request_data(api_name, api_path, req_param)
 
+
     #TODO not working
     def get_logs(self) -> dict[str, object] | str:
         api_name = 'SYNO.Docker.Log'

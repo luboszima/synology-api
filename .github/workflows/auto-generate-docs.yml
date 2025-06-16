@@ -21,7 +21,7 @@ jobs:
           files: |
             api:
               - synology_api/**
-      - name: Run step if doc file(s) change
+      - name: Run step if api file(s) change
         if: steps.changed-files.outputs.api_any_changed == 'true'
         env:
           API_ALL_CHANGED_FILES: ${{ steps.changed-files.outputs.api_all_changed_files }}
