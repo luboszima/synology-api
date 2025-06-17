@@ -6,14 +6,14 @@ title: ✅ Group
 <!-- -------------------------------------------- -->
 <!-- THIS FILE IS AUTO-GENERATED. DO NOT MODIFY.  -->
 <!-- -------------------------------------------- -->
-  
+
 # Group
 ## Overview
 Core Group API implementation.
 
 ### Supported methods
 
-    - **Getters** : 
+    - **Getters** :
         - Get all groups
         - Get group members
         - Get group shares permissions
@@ -25,7 +25,7 @@ Core Group API implementation.
         - Set group share permissions
         - Set group share quotas
         - Set group service speed limit
-    
+
     - **Actions** :
         - Create new group
         - Delete groups
@@ -33,30 +33,30 @@ Core Group API implementation.
         - Remove users from a group
 ## Methods
 ### `get_groups`
-Retrieve groups information.  
-  
+Retrieve groups information.
+
 #### Internal API
 <div class="padding-left--md">
-`SYNO.Core.Group` 
+`SYNO.Core.Group`
 </div>
-  
+
 #### Parameters
 <div class="padding-left--md">
-**_offset_** `int`  
-The offset of the groups to retrieve. Defaults to `0`.  
-  
-**_limit_** `int`  
-The maximum number of groups to retrieve. Defaults to `-1` (all groups).  
-  
-**_name_only_** `bool`  
-If `True`, returns only group names. If `False`, returns full group information. Defaults to `False`.  
-  
+**_offset_** `int`
+The offset of the groups to retrieve. Defaults to `0`.
+
+**_limit_** `int`
+The maximum number of groups to retrieve. Defaults to `-1` (all groups).
+
+**_name_only_** `bool`
+If `True`, returns only group names. If `False`, returns full group information. Defaults to `False`.
+
 
 </div>
 #### Returns
 <div class="padding-left--md">
-`dict[str, object]`  
-A dictionary containing the groups information.  
+`dict[str, object]`
+A dictionary containing the groups information.
 
 </div>
 #### Example return
@@ -101,29 +101,29 @@ A dictionary containing the groups information.
 
 
 ### `get_users`
-Retrieve users members or not of a group.  
-  
+Retrieve users members or not of a group.
+
 #### Internal API
 <div class="padding-left--md">
-`SYNO.Core.Group.Member` 
+`SYNO.Core.Group.Member`
 </div>
-  
+
 #### Parameters
 <div class="padding-left--md">
-**_group_** `str`  
-The group to list users from.  
-  
-**_in_group_** `bool`  
-Defaults to `True`.  
-If `True`, retrieves users who are members of the specified group.   
-If `False`, retrieves users who are not members of the group.  
-  
+**_group_** `str`
+The group to list users from.
+
+**_in_group_** `bool`
+Defaults to `True`.
+If `True`, retrieves users who are members of the specified group.
+If `False`, retrieves users who are not members of the group.
+
 
 </div>
 #### Returns
 <div class="padding-left--md">
-`dict[str, object]`  
-A dictionary containing the result of the request.  
+`dict[str, object]`
+A dictionary containing the result of the request.
 
 </div>
 #### Example return
@@ -163,24 +163,24 @@ A dictionary containing the result of the request.
 
 
 ### `get_speed_limits`
-Retrieve bandwidth control settings for a given group.  
-  
+Retrieve bandwidth control settings for a given group.
+
 #### Internal API
 <div class="padding-left--md">
-`SYNO.Core.BandwidthControl` 
+`SYNO.Core.BandwidthControl`
 </div>
-  
+
 #### Parameters
 <div class="padding-left--md">
-**_group_** `str `  
-The group to retrieve settings for.  
-  
+**_group_** `str `
+The group to retrieve settings for.
+
 
 </div>
 #### Returns
 <div class="padding-left--md">
-`dict[str, object]`  
-A dictionary containing the result of the request.  
+`dict[str, object]`
+A dictionary containing the result of the request.
 
 </div>
 
@@ -190,24 +190,24 @@ A dictionary containing the result of the request.
 
 
 ### `get_quota`
-Retrieve quota settings for a given group.  
-  
+Retrieve quota settings for a given group.
+
 #### Internal API
 <div class="padding-left--md">
-`SYNO.Core.Quota` 
+`SYNO.Core.Quota`
 </div>
-  
+
 #### Parameters
 <div class="padding-left--md">
-**_group_** `str `  
-The group to retrieve quota settings for.  
-  
+**_group_** `str `
+The group to retrieve quota settings for.
+
 
 </div>
 #### Returns
 <div class="padding-left--md">
-`dict[str, object] `  
-A dictionary containing the result of the request.  
+`dict[str, object] `
+A dictionary containing the result of the request.
 
 </div>
 #### Example return
@@ -243,24 +243,24 @@ A dictionary containing the result of the request.
 
 
 ### `get_permissions`
-Retrieve share permissions for a given group.  
-  
+Retrieve share permissions for a given group.
+
 #### Internal API
 <div class="padding-left--md">
-`SYNO.Core.Share.Permission` 
+`SYNO.Core.Share.Permission`
 </div>
-  
+
 #### Parameters
 <div class="padding-left--md">
-**_group_** `str`  
-The group to list permissions for.  
-  
+**_group_** `str`
+The group to list permissions for.
+
 
 </div>
 #### Returns
 <div class="padding-left--md">
-`dict[str, object]`  
-A dictionary containing the result of the request.  
+`dict[str, object]`
+A dictionary containing the result of the request.
 
 </div>
 #### Example return
@@ -286,7 +286,7 @@ A dictionary containing the result of the request.
         "total": 1
     },
     "success": true
-}     
+}
 ```
 </details>
 
@@ -296,30 +296,30 @@ A dictionary containing the result of the request.
 
 
 ### `set_group_info`
-Change group name and/or description.  
-  
+Change group name and/or description.
+
 #### Internal API
 <div class="padding-left--md">
-`SYNO.Core.Group` 
+`SYNO.Core.Group`
 </div>
-  
+
 #### Parameters
 <div class="padding-left--md">
-**_group_** `str`  
-The group to set information for.  
-  
-**_new_name_** `str`  
-The new name of the group. Defaults to current value.  
-  
-**_new_description_** `str`  
-The new description of the group. Defaults to current value.  
-  
+**_group_** `str`
+The group to set information for.
+
+**_new_name_** `str`
+The new name of the group. Defaults to current value.
+
+**_new_description_** `str`
+The new description of the group. Defaults to current value.
+
 
 </div>
 #### Returns
 <div class="padding-left--md">
-`dict[str, object] `  
-A dictionary containing the result of the request.  
+`dict[str, object] `
+A dictionary containing the result of the request.
 
 </div>
 #### Example return
@@ -342,20 +342,20 @@ A dictionary containing the result of the request.
 
 
 ### `set_share_quota`
-Set group quota for a given share.  
-  
+Set group quota for a given share.
+
 #### Internal API
 <div class="padding-left--md">
-`SYNO.Core.Quota` 
+`SYNO.Core.Quota`
 </div>
-  
+
 #### Parameters
 <div class="padding-left--md">
-**_group_** `str`  
-The group to set the quota for.  
-  
-**_share_quotas (list[dict[str, Any]])_** ``  
-The quotas to set for the group.  
+**_group_** `str`
+The group to set the quota for.
+
+**_share_quotas (list[dict[str, Any]])_** ``
+The quotas to set for the group.
 Example:
 ```python
 [
@@ -368,14 +368,14 @@ Example:
         "quota": 5120, # in MB
     }
 ]
-```  
-  
+```
+
 
 </div>
 #### Returns
 <div class="padding-left--md">
-`dict[str, object] `  
-A dictionary containing the result of the request.  
+`dict[str, object] `
+A dictionary containing the result of the request.
 
 </div>
 #### Example return
@@ -395,20 +395,20 @@ A dictionary containing the result of the request.
 
 
 ### `set_share_permissions`
-Set group permissions for a given share.  
-  
+Set group permissions for a given share.
+
 #### Internal API
 <div class="padding-left--md">
-`SYNO.Core.Share.Permission` 
+`SYNO.Core.Share.Permission`
 </div>
-  
+
 #### Parameters
 <div class="padding-left--md">
-**_group_** `str`  
-The group to set the permissions for.  
-  
-**_permissions_** `list[dict[str, object]]:`  
-The permissions to set for the group.  
+**_group_** `str`
+The group to set the permissions for.
+
+**_permissions_** `list[dict[str, object]]:`
+The permissions to set for the group.
 Example:
 ```python
 [
@@ -425,14 +425,14 @@ Example:
         "is_deny": False
     }
 ]
-```  
-  
+```
+
 
 </div>
 #### Returns
 <div class="padding-left--md">
-`dict[str, object]`  
-A dictionary containing the result of the request.  
+`dict[str, object]`
+A dictionary containing the result of the request.
 
 </div>
 #### Example return
@@ -451,44 +451,44 @@ A dictionary containing the result of the request.
 
 
 ### `set_speed_limit`
-Set speed limit for a given share.   
+Set speed limit for a given share.
 :::info
- 
- Doesn't support **scheduled** speed limits, only on/off.  
- 
+
+ Doesn't support **scheduled** speed limits, only on/off.
+
 :::
 
 #### Internal API
 <div class="padding-left--md">
-`SYNO.Core.BandwidthControl` 
+`SYNO.Core.BandwidthControl`
 </div>
-  
+
 #### Parameters
 <div class="padding-left--md">
-**_group_** `str`  
-The group to set the speed limit for.  
-  
-**_upload_limit_** `int`  
-The maximum upload speed in KB/s.  
-  
-**_download_limit_** `int`  
-The maximum download speed in KB/s.  
-  
-**_protocol_** `str`  
-The protocol to set the speed limit for.   
+**_group_** `str`
+The group to set the speed limit for.
+
+**_upload_limit_** `int`
+The maximum upload speed in KB/s.
+
+**_download_limit_** `int`
+The maximum download speed in KB/s.
+
+**_protocol_** `str`
+The protocol to set the speed limit for.
 Possible values:
 - FileStation
 - WebDAV
 - FTP
 - NetworkBackup (Rsync)
-- CloudStation (Synology Drive)  
-  
+- CloudStation (Synology Drive)
+
 
 </div>
 #### Returns
 <div class="padding-left--md">
-`dict[str, object]`  
-A dictionary containing the result of the request.  
+`dict[str, object]`
+A dictionary containing the result of the request.
 
 </div>
 #### Example return
@@ -512,27 +512,27 @@ A dictionary containing the result of the request.
 
 
 ### `add_users`
-Add users to a group.  
-  
+Add users to a group.
+
 #### Internal API
 <div class="padding-left--md">
-`SYNO.Core.Group.Member` 
+`SYNO.Core.Group.Member`
 </div>
-  
+
 #### Parameters
 <div class="padding-left--md">
-**_group_** `str `  
-The group to add users to.  
-  
-**_users_** `list[str]`  
-The users to add to the group.  
-  
+**_group_** `str `
+The group to add users to.
+
+**_users_** `list[str]`
+The users to add to the group.
+
 
 </div>
 #### Returns
 <div class="padding-left--md">
-`dict[str, object]`  
-A dictionary containing the result of the request.  
+`dict[str, object]`
+A dictionary containing the result of the request.
 
 </div>
 #### Example return
@@ -552,27 +552,27 @@ A dictionary containing the result of the request.
 
 
 ### `remove_users`
-Remove users from a group.  
-  
+Remove users from a group.
+
 #### Internal API
 <div class="padding-left--md">
-`SYNO.Core.Group.Member` 
+`SYNO.Core.Group.Member`
 </div>
-  
+
 #### Parameters
 <div class="padding-left--md">
-**_group_** `str `  
-The group to remove users from.  
-  
-**_users_** `list[str]`  
-The users to remove from the group.  
-  
+**_group_** `str `
+The group to remove users from.
+
+**_users_** `list[str]`
+The users to remove from the group.
+
 
 </div>
 #### Returns
 <div class="padding-left--md">
-`dict[str, object]`  
-A dictionary containing the result of the request.  
+`dict[str, object]`
+A dictionary containing the result of the request.
 
 </div>
 #### Example return
@@ -592,27 +592,27 @@ A dictionary containing the result of the request.
 
 
 ### `create`
-Create group.  
-  
+Create group.
+
 #### Internal API
 <div class="padding-left--md">
-`SYNO.Core.Group` 
+`SYNO.Core.Group`
 </div>
-  
+
 #### Parameters
 <div class="padding-left--md">
-**_name_** `str`  
-Name to assign to the group.  
-  
-**_description_** `str`  
-Description to assign to the group. Defaults to empty string.  
-  
+**_name_** `str`
+Name to assign to the group.
+
+**_description_** `str`
+Description to assign to the group. Defaults to empty string.
+
 
 </div>
 #### Returns
 <div class="padding-left--md">
-`dict[str, object] `  
-A dictionary containing the result of the request.  
+`dict[str, object] `
+A dictionary containing the result of the request.
 
 </div>
 #### Example return
@@ -635,24 +635,24 @@ A dictionary containing the result of the request.
 
 
 ### `delete`
-Delete specified groups.  
-  
+Delete specified groups.
+
 #### Internal API
 <div class="padding-left--md">
-`SYNO.Core.Group` 
+`SYNO.Core.Group`
 </div>
-  
+
 #### Parameters
 <div class="padding-left--md">
-**_groups_** `list[str]`  
-The groups to delete.  
-  
+**_groups_** `list[str]`
+The groups to delete.
+
 
 </div>
 #### Returns
 <div class="padding-left--md">
-`dict[str, object] `  
-A dictionary containing the result of the request.  
+`dict[str, object] `
+A dictionary containing the result of the request.
 
 </div>
 #### Example return

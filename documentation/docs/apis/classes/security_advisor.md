@@ -6,12 +6,12 @@ title: 🚧 SecurityAdvisor
 <!-- -------------------------------------------- -->
 <!-- THIS FILE IS AUTO-GENERATED. DO NOT MODIFY.  -->
 <!-- -------------------------------------------- -->
-  
+
 # SecurityAdvisor
 :::warning
- 
+
 This API is not documented yet.
- 
+
 :::
 ## Overview
 

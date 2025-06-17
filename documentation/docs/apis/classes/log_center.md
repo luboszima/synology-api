@@ -6,12 +6,12 @@ title: 🚧 LogCenter
 <!-- -------------------------------------------- -->
 <!-- THIS FILE IS AUTO-GENERATED. DO NOT MODIFY.  -->
 <!-- -------------------------------------------- -->
-  
+
 # LogCenter
 :::warning
- 
+
 This API is not documented yet.
- 
+
 :::
 ## Overview
 

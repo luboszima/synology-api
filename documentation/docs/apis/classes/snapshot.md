@@ -6,7 +6,7 @@ title: ✅ Snapshot
 <!-- -------------------------------------------- -->
 <!-- THIS FILE IS AUTO-GENERATED. DO NOT MODIFY.  -->
 <!-- -------------------------------------------- -->
-  
+
 # Snapshot
 ## Overview
 Class for interacting with Snapshot Replication APIs.
@@ -16,14 +16,14 @@ There is no documentation for these APIs, so the implementation is based on netw
 
 ### Supported methods
 
-    - **Getters** : 
+    - **Getters** :
         - Get all share/LUN snapshots
         - Get all replications
         - Get all LUNs
 
     - **Setters** :
         - Set snapshot attributes
-    
+
     - **Actions** :
         - Create share/LUN snapshot (WORM support only for share snaps ATM)
         - Delete share/LUN snapshot
@@ -65,48 +65,48 @@ print(resp)
 ```
 ## Methods
 ### `list_snapshots`
-List snapshots for a share.  
-  
+List snapshots for a share.
+
 #### Internal API
 <div class="padding-left--md">
-`SYNO.Core.Share.Snapshot` 
+`SYNO.Core.Share.Snapshot`
 </div>
-  
+
 #### Parameters
 <div class="padding-left--md">
-**_share_name_** `str`  
-Name of the share to list snapshots for.  
-  
-**_attribute_filter_** `list[str]`  
-List of attributes filter to apply. Defaults to `[]` (no filter).  
+**_share_name_** `str`
+Name of the share to list snapshots for.
 
-Each attribute filter is a string in the format of `"attr==value"` or `"attr=value"` and optionally prefixed with `!` to negate the filter.  
+**_attribute_filter_** `list[str]`
+List of attributes filter to apply. Defaults to `[]` (no filter).
+
+Each attribute filter is a string in the format of `"attr==value"` or `"attr=value"` and optionally prefixed with `!` to negate the filter.
 
 The following are examples of valid attribute filters:
     - `["!hide==true", "desc==abc"]` -> hide is not true and desc is exactly abc.
-    - `["desc=abc"]` -> desc has abc in it.  
-  
-**_additional_attribute_** `list[str]`  
-List of snapshot attributes whose values are included in the response. Defaults to `[]` (only time is returned).  
+    - `["desc=abc"]` -> desc has abc in it.
+
+**_additional_attribute_** `list[str]`
+List of snapshot attributes whose values are included in the response. Defaults to `[]` (only time is returned).
 
 Note that not all attributes are available via API. The following are confirmed to work:
     - `"desc"`
     - `"lock"`
     - `"worm_lock"`
-    - `"schedule_snapshot"`  
-  
-**_offset_** `int`  
-Offset to start listing from. Defaults to `0`.  
-  
-**_limit_** `int`  
-Number of snapshots to return. Defaults to `-1` (all).  
-  
+    - `"schedule_snapshot"`
+
+**_offset_** `int`
+Offset to start listing from. Defaults to `0`.
+
+**_limit_** `int`
+Number of snapshots to return. Defaults to `-1` (all).
+
 
 </div>
 #### Returns
 <div class="padding-left--md">
-`dict[str, object]`  
-API response if successful, error message if not.  
+`dict[str, object]`
+API response if successful, error message if not.
 
 </div>
 #### Example return
@@ -140,32 +140,32 @@ API response if successful, error message if not.
 
 
 ### `list_snapshots_lun`
-List snapshots for a LUN.  
-  
+List snapshots for a LUN.
+
 #### Internal API
 <div class="padding-left--md">
-`SYNO.Core.ISCSI.LUN` 
+`SYNO.Core.ISCSI.LUN`
 </div>
-  
+
 #### Parameters
 <div class="padding-left--md">
-**_src_lun_uuid_** `str`  
-UUID of the source LUN to list snapshots for.  
-  
-**_additional_** `list[str]`  
-Additional fields to retrieve. Specify `[]` to get only basic information.   
-Defaults to `["locked_app_keys", "is_worm_locked"]`  
+**_src_lun_uuid_** `str`
+UUID of the source LUN to list snapshots for.
+
+**_additional_** `list[str]`
+Additional fields to retrieve. Specify `[]` to get only basic information.
+Defaults to `["locked_app_keys", "is_worm_locked"]`
 
 Possible values:
 - `"locked_app_keys"` -> If snapshot is preserved by the system, the locking package key will be returned.
-- `"is_worm_locked"` -> Whether the snapshot is locked by WORM.  
-  
+- `"is_worm_locked"` -> Whether the snapshot is locked by WORM.
+
 
 </div>
 #### Returns
 <div class="padding-left--md">
-`dict[str, object]`  
-Dictionary containing the LUN snapshots information.  
+`dict[str, object]`
+Dictionary containing the LUN snapshots information.
 
 </div>
 #### Example return
@@ -235,20 +235,20 @@ Dictionary containing the LUN snapshots information.
 
 
 ### `list_luns`
-List available LUNs  
-  
+List available LUNs
+
 #### Internal API
 <div class="padding-left--md">
-`SYNO.Core.ISCSI.LUN` 
+`SYNO.Core.ISCSI.LUN`
 </div>
-  
+
 #### Parameters
 <div class="padding-left--md">
-**_types_** `list[str]`  
-Type of LUNS to retrieve.  
+**_types_** `list[str]`
+Type of LUNS to retrieve.
 
- Defaults to `[ "BLOCK", "FILE", "THIN", "ADV", "SINK", "CINDER", "CINDER_BLUN", "CINDER_BLUN_THICK", "BLUN", "BLUN_THICK", "BLUN_SINK", "BLUN_THICK_SINK" ]`.  
- 
+ Defaults to `[ "BLOCK", "FILE", "THIN", "ADV", "SINK", "CINDER", "CINDER_BLUN", "CINDER_BLUN_THICK", "BLUN", "BLUN_THICK", "BLUN_SINK", "BLUN_THICK_SINK" ]`.
+
  Possible values:
  - `"BLOCK"`
  - `"FILE"`
@@ -261,12 +261,12 @@ Type of LUNS to retrieve.
  - `"BLUN"`
  - `"BLUN_THICK"`
  - `"BLUN_SINK"`
- - `"BLUN_THICK_SINK"`  
-  
-**_additional_info_** `list[str]`  
-Additional LUN information to include in the response. Specify `[]` to get only basic information.  
+ - `"BLUN_THICK_SINK"`
 
-Defaults to `[ "is_action_locked", "is_mapped", "extent_size", "allocated_size", "status", "allow_bkpobj", "flashcache_status", "family_config", "snapshot_info" ]`.  
+**_additional_info_** `list[str]`
+Additional LUN information to include in the response. Specify `[]` to get only basic information.
+
+Defaults to `[ "is_action_locked", "is_mapped", "extent_size", "allocated_size", "status", "allow_bkpobj", "flashcache_status", "family_config", "snapshot_info" ]`.
 
 Possible values:
 - `"is_action_locked"`
@@ -277,14 +277,14 @@ Possible values:
 - `"allow_bkpobj"`
 - `"flashcache_status"`
 - `"family_config"`
-- `"snapshot_info"`  
-  
+- `"snapshot_info"`
+
 
 </div>
 #### Returns
 <div class="padding-left--md">
-`dict[str, object]`  
-A dictionary containing a list of LUNs present in the system.  
+`dict[str, object]`
+A dictionary containing a list of LUNs present in the system.
 
 </div>
 #### Example return
@@ -428,19 +428,19 @@ A dictionary containing a list of LUNs present in the system.
 
 
 ### `list_replication_plans`
-List replication plans.  
-  
+List replication plans.
+
 #### Internal API
 <div class="padding-left--md">
-`SYNO.DR.Plan` 
+`SYNO.DR.Plan`
 </div>
-  
+
 #### Parameters
 <div class="padding-left--md">
-**_additional_info_** `list[str]`  
-List of additional information to include in the response. Specify `[]` to get only basic information.  
+**_additional_info_** `list[str]`
+List of additional information to include in the response. Specify `[]` to get only basic information.
 
-Defaults to `["sync_policy", "sync_report", "main_site_info", "dr_site_info", "can_do", "op_info", "last_op_info", "topology", "testfailover_info", "retention_lock_report"]`.  
+Defaults to `["sync_policy", "sync_report", "main_site_info", "dr_site_info", "can_do", "op_info", "last_op_info", "topology", "testfailover_info", "retention_lock_report"]`.
 
 Possible values:
     - `"sync_policy"` -> Information about the sync policy as schedule, retention, lock, etc.
@@ -452,14 +452,14 @@ Possible values:
     - `"last_op_info"` -> Information about the last operation.
     - `"topology"` -> Information about the replication topology (main / dr site & plan information).
     - `"testfailover_info"` -> Information about the previous test failover operation.
-    - `"retention_lock_report"` -> Information about the first / last snapshot.  
-  
+    - `"retention_lock_report"` -> Information about the first / last snapshot.
+
 
 </div>
 #### Returns
 <div class="padding-left--md">
-`dict[str, object]`  
-API response if successful, error message if not  
+`dict[str, object]`
+API response if successful, error message if not
 
 </div>
 #### Example return
@@ -768,37 +768,37 @@ API response if successful, error message if not
 
 
 ### `create_snapshot`
-Create a snapshot for a share.  
-  
+Create a snapshot for a share.
+
 #### Internal API
 <div class="padding-left--md">
-`SYNO.Core.Share.Snapshot` 
+`SYNO.Core.Share.Snapshot`
 </div>
-  
+
 #### Parameters
 <div class="padding-left--md">
-**_share_name_** `str`  
-Name of the share to create a snapshot for.  
-  
-**_description_** `str`  
-Description of the snapshot. Defaults to `""`.  
-  
-**_lock_** `bool`  
-Whether to lock the snapshot. Defaults to `False`.  
-  
-**_immutable_** `bool`  
-Whether to make the snapshot immutable. Defaults to `False`.  
-  
-**_immutable_days_** `int`  
-Number of days to make the snapshot immutable for. Defaults to `7`.  
-Must be greater than `0`. Mandatory if immutable is `True`.  
-  
+**_share_name_** `str`
+Name of the share to create a snapshot for.
+
+**_description_** `str`
+Description of the snapshot. Defaults to `""`.
+
+**_lock_** `bool`
+Whether to lock the snapshot. Defaults to `False`.
+
+**_immutable_** `bool`
+Whether to make the snapshot immutable. Defaults to `False`.
+
+**_immutable_days_** `int`
+Number of days to make the snapshot immutable for. Defaults to `7`.
+Must be greater than `0`. Mandatory if immutable is `True`.
+
 
 </div>
 #### Returns
 <div class="padding-left--md">
-`dict[str, object]`  
-API response if successful, error message if not.  
+`dict[str, object]`
+API response if successful, error message if not.
 
 </div>
 #### Example return
@@ -818,32 +818,32 @@ API response if successful, error message if not.
 
 
 ### `delete_snapshots`
-Delete snapshots for a share.  
+Delete snapshots for a share.
 :::warning
- 
- This action removes data from the file system. Use with caution.  
- 
+
+ This action removes data from the file system. Use with caution.
+
 :::
 
 #### Internal API
 <div class="padding-left--md">
-`SYNO.Core.Share.Snapshot` 
+`SYNO.Core.Share.Snapshot`
 </div>
-  
+
 #### Parameters
 <div class="padding-left--md">
-**_share_name_** `str`  
-Name of the share to delete snapshots for.  
-  
-**_snapshots_** `list[str]`  
-List of snapshots to delete.  
-  
+**_share_name_** `str`
+Name of the share to delete snapshots for.
+
+**_snapshots_** `list[str]`
+List of snapshots to delete.
+
 
 </div>
 #### Returns
 <div class="padding-left--md">
-`dict[str, object]`  
-API response if successful, error message if not.  
+`dict[str, object]`
+API response if successful, error message if not.
 
 </div>
 #### Example return
@@ -862,46 +862,46 @@ API response if successful, error message if not.
 
 
 ### `set_snapshot_attr`
-Set attributes for a snapshot.  
-  
+Set attributes for a snapshot.
+
 #### Internal API
 <div class="padding-left--md">
-`SYNO.Core.Share.Snapshot` 
+`SYNO.Core.Share.Snapshot`
 </div>
-  
+
 #### Parameters
 <div class="padding-left--md">
-**_share_name_** `str`  
-Name of the share to set attributes for  
-  
-**_snapshot_** `str`  
-Name of the snapshot to set attributes for  
-  
-**_description_** `str`  
-Description of the snapshot. Defaults to `None` (no change).  
-  
-**_lock_** `bool`  
-Whether to lock the snapshot. Defaults to `None` (no change).  
-  
-**_immutable_** `bool`  
-Whether to make the snapshot immutable. Defaults to `None` (no change).  
-  
-**_immutable_days_** `int`  
+**_share_name_** `str`
+Name of the share to set attributes for
+
+**_snapshot_** `str`
+Name of the snapshot to set attributes for
+
+**_description_** `str`
+Description of the snapshot. Defaults to `None` (no change).
+
+**_lock_** `bool`
+Whether to lock the snapshot. Defaults to `None` (no change).
+
+**_immutable_** `bool`
+Whether to make the snapshot immutable. Defaults to `None` (no change).
+
+**_immutable_days_** `int`
 Number of days to make the snapshot immutable for. Defaults to `None` (no change).
-Must be greater than `0`. Mandatory if immutable is `True`.  
-  
+Must be greater than `0`. Mandatory if immutable is `True`.
+
 
 </div>
 #### Returns
 <div class="padding-left--md">
-`dict[str, object]`  
-API response if successful, error message if not.  
+`dict[str, object]`
+API response if successful, error message if not.
 
 </div>
 #### Example return
 <details>
 <summary>Click to expand</summary>
-```json     
+```json
 {
     "success": true
 }
@@ -914,30 +914,30 @@ API response if successful, error message if not.
 
 
 ### `sync_replication`
-Trigger a sync for a replication plan.  
-  
+Trigger a sync for a replication plan.
+
 #### Internal API
 <div class="padding-left--md">
-`SYNO.DR.Plan` 
+`SYNO.DR.Plan`
 </div>
-  
+
 #### Parameters
 <div class="padding-left--md">
-**_plan_id_** `str`  
-ID of the replication plan to sync.  
-  
-**_lock_snapshot_** `bool`  
-Whether to lock the snapshot to prevent rotation. Defaults to `True`.  
-  
-**_description_** `str`  
-Description of the snapshot. Defaults to `Snapshot taken by [Synology API]`.  
-  
+**_plan_id_** `str`
+ID of the replication plan to sync.
+
+**_lock_snapshot_** `bool`
+Whether to lock the snapshot to prevent rotation. Defaults to `True`.
+
+**_description_** `str`
+Description of the snapshot. Defaults to `Snapshot taken by [Synology API]`.
+
 
 </div>
 #### Returns
 <div class="padding-left--md">
-`dict[str, object]`  
-API response if successful  
+`dict[str, object]`
+API response if successful
 
 </div>
 #### Example return
@@ -956,38 +956,38 @@ API response if successful
 
 
 ### `create_snapshot_lun`
-Create a snapshot for a LUN.   
+Create a snapshot for a LUN.
 :::note
- 
- At the moment, it does not support creating WORM snapshots.  
- 
+
+ At the moment, it does not support creating WORM snapshots.
+
 :::
 
 #### Internal API
 <div class="padding-left--md">
-`SYNO.Core.ISCSI.LUN` 
+`SYNO.Core.ISCSI.LUN`
 </div>
-  
+
 #### Parameters
 <div class="padding-left--md">
-**_lun_id_** `str`  
-ID of the LUN to create a snapshot for  
-  
-**_description_** `str`  
-Description of the snapshot. Defaults to `Snapshot taken by [Synology API]`.  
-  
-**_lock_** `bool`  
-Whether to lock the snapshot. Defaults to `True`.  
-  
-**_app_aware_** `bool`  
-Whether to make the snapshot application aware. Defaults to `True`.  
-  
+**_lun_id_** `str`
+ID of the LUN to create a snapshot for
+
+**_description_** `str`
+Description of the snapshot. Defaults to `Snapshot taken by [Synology API]`.
+
+**_lock_** `bool`
+Whether to lock the snapshot. Defaults to `True`.
+
+**_app_aware_** `bool`
+Whether to make the snapshot application aware. Defaults to `True`.
+
 
 </div>
 #### Returns
 <div class="padding-left--md">
-`dict[str, object]`  
-API response if successful  
+`dict[str, object]`
+API response if successful
 
 </div>
 #### Example return
@@ -1010,29 +1010,29 @@ API response if successful
 
 
 ### `delete_snapshots_lun`
-Delete snapshots for a LUN.  
+Delete snapshots for a LUN.
 :::warning
- 
- This action removes data from the file system. Use with caution.  
- 
+
+ This action removes data from the file system. Use with caution.
+
 :::
 
 #### Internal API
 <div class="padding-left--md">
-`SYNO.Core.ISCSI.LUN` 
+`SYNO.Core.ISCSI.LUN`
 </div>
-  
+
 #### Parameters
 <div class="padding-left--md">
-**_snapshot_uuids_** `list[str]`  
-List of UUIDs of the snapshots to delete.  
-  
+**_snapshot_uuids_** `list[str]`
+List of UUIDs of the snapshots to delete.
+
 
 </div>
 #### Returns
 <div class="padding-left--md">
-`dict[str, object]`  
-API response if successful.   
+`dict[str, object]`
+API response if successful.
 
 If deletion fails, an error code is returned alonside the snapshot uuid:
 ```json
@@ -1044,7 +1044,7 @@ If deletion fails, an error code is returned alonside the snapshot uuid:
     ],
     "success": true
 }
-```  
+```
 
 </div>
 #### Example return
