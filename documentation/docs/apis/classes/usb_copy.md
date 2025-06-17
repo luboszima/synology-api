@@ -6,33 +6,33 @@ title: ✅ USBCopy
 <!-- -------------------------------------------- -->
 <!-- THIS FILE IS AUTO-GENERATED. DO NOT MODIFY.  -->
 <!-- -------------------------------------------- -->
-  
+
 # USBCopy
 ## Overview
 USB Copy Implementation.
 
 ### Supported methods
 
-    - **Getters** : 
+    - **Getters** :
         - Get package settings
         - Get package logs
         - Get task settings
-        
+
     - **Actions** :
         - Enable / Disable task
 ## Methods
 ### `get_package_settings`
-Retrieve package settings.  
-  
+Retrieve package settings.
+
 #### Internal API
 <div class="padding-left--md">
-`SYNO.USBCopy` 
+`SYNO.USBCopy`
 </div>
-  
+
 #### Returns
 <div class="padding-left--md">
-`dict[str, object]`  
-Parsed JSON into `dict`  
+`dict[str, object]`
+Parsed JSON into `dict`
 
 </div>
 #### Example return
@@ -56,27 +56,27 @@ Parsed JSON into `dict`
 
 
 ### `get_package_logs`
-Retrieve package logs.  
-  
+Retrieve package logs.
+
 #### Internal API
 <div class="padding-left--md">
-`SYNO.USBCopy` 
+`SYNO.USBCopy`
 </div>
-  
+
 #### Parameters
 <div class="padding-left--md">
-**_offset_** `int`  
-Defaults to `0`.  
-  
-**_limit_** `int`  
-Defaults to `200`.  
-  
+**_offset_** `int`
+Defaults to `0`.
+
+**_limit_** `int`
+Defaults to `200`.
+
 
 </div>
 #### Returns
 <div class="padding-left--md">
-`dict[str, object]`  
-Parsed response JSON into `dict`  
+`dict[str, object]`
+Parsed response JSON into `dict`
 
 </div>
 #### Example return
@@ -108,24 +108,24 @@ Parsed response JSON into `dict`
 
 
 ### `get_task_settings`
-Retrieve task settings  
-  
+Retrieve task settings
+
 #### Internal API
 <div class="padding-left--md">
-`SYNO.USBCopy` 
+`SYNO.USBCopy`
 </div>
-  
+
 #### Parameters
 <div class="padding-left--md">
-**_task_id_** `int`  
-Task ID to retrieve info for  
-  
+**_task_id_** `int`
+Task ID to retrieve info for
+
 
 </div>
 #### Returns
 <div class="padding-left--md">
-`dict[str, object]`  
-Parsed response JSON into `dict`  
+`dict[str, object]`
+Parsed response JSON into `dict`
 
 </div>
 #### Example return
@@ -175,27 +175,27 @@ Parsed response JSON into `dict`
 
 
 ### `toggle_task`
-Enable or disable USB Copy task  
-  
+Enable or disable USB Copy task
+
 #### Internal API
 <div class="padding-left--md">
-`SYNO.USBCopy` 
+`SYNO.USBCopy`
 </div>
-  
+
 #### Parameters
 <div class="padding-left--md">
-**_task_id_** `int`  
-Task ID to apply the setting to.  
-  
-**_enable_** `bool`  
-Whether to enable (`True`) or disable (`False`) USB Copy. Defaults to `True`.  
-  
+**_task_id_** `int`
+Task ID to apply the setting to.
+
+**_enable_** `bool`
+Whether to enable (`True`) or disable (`False`) USB Copy. Defaults to `True`.
+
 
 </div>
 #### Returns
 <div class="padding-left--md">
-`dict[str, object]`  
-Parsed response JSON into `dict`  
+`dict[str, object]`
+Parsed response JSON into `dict`
 
 </div>
 #### Example return

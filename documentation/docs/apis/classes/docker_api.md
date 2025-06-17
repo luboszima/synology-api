@@ -6,7 +6,7 @@ title: ✅ Docker
 <!-- -------------------------------------------- -->
 <!-- THIS FILE IS AUTO-GENERATED. DO NOT MODIFY.  -->
 <!-- -------------------------------------------- -->
-  
+
 # Docker
 ## Overview
 Docker API implementation.
@@ -34,17 +34,17 @@ Supported actions:
         - Export container profile and content
 ## Methods
 ### `containers`
-Get list of containers.  
-  
+Get list of containers.
+
 #### Internal API
 <div class="padding-left--md">
-`SYNO.Docker.Container` 
+`SYNO.Docker.Container`
 </div>
-  
+
 #### Returns
 <div class="padding-left--md">
-`dict[str, object]`  
-A dictionary containing the containers information.  
+`dict[str, object]`
+A dictionary containing the containers information.
 
 </div>
 #### Example return
@@ -126,17 +126,17 @@ A dictionary containing the containers information.
 
 
 ### `container_resources`
-Get resources of all containers.  
-  
+Get resources of all containers.
+
 #### Internal API
 <div class="padding-left--md">
-`SYNO.Docker.Container.Resource` 
+`SYNO.Docker.Container.Resource`
 </div>
-  
+
 #### Returns
 <div class="padding-left--md">
-`dict[str, object]`  
-A dictionary containing the resources information of the containers.  
+`dict[str, object]`
+A dictionary containing the resources information of the containers.
 
 </div>
 #### Example return
@@ -178,17 +178,17 @@ A dictionary containing the resources information of the containers.
 
 
 ### `system_resources`
-Get system resources  
-  
+Get system resources
+
 #### Internal API
 <div class="padding-left--md">
-`SYNO.Core.System.Utilization` 
+`SYNO.Core.System.Utilization`
 </div>
-  
+
 #### Returns
 <div class="padding-left--md">
-`dict[str, object]`  
-A dictionary containing the system resources information.  
+`dict[str, object]`
+A dictionary containing the system resources information.
 
 </div>
 #### Example return
@@ -316,30 +316,30 @@ A dictionary containing the system resources information.
 
 
 ### `downloaded_images`
-List of docker images available on Synology NAS.  
-  
+List of docker images available on Synology NAS.
+
 #### Internal API
 <div class="padding-left--md">
-`SYNO.Docker.Image` 
+`SYNO.Docker.Image`
 </div>
-  
+
 #### Parameters
 <div class="padding-left--md">
-**_limit_** `int`  
-The maximum number of docker images to return. Defaults -1 (all).  
-  
-**_offset_** `int`  
-The offset for pagination. Defaults to 0.  
-  
-**_show_dsm_** `bool`  
-Defaults to False.  
-  
+**_limit_** `int`
+The maximum number of docker images to return. Defaults -1 (all).
+
+**_offset_** `int`
+The offset for pagination. Defaults to 0.
+
+**_show_dsm_** `bool`
+Defaults to False.
+
 
 </div>
 #### Returns
 <div class="padding-left--md">
-`dict[str, object]`  
-A dictionary containing the list of downloaded images.  
+`dict[str, object]`
+A dictionary containing the list of downloaded images.
 
 </div>
 #### Example return
@@ -378,7 +378,7 @@ A dictionary containing the list of downloaded images.
 
 
 ### `images_registry_resources`
-Get list of docker registries.  
+Get list of docker registries.
 Example return
 --------------
 ```json
@@ -401,12 +401,12 @@ Example return
    "httpd_restart" : false,
    "success" : true
 }
-```  
+```
 #### Internal API
 <div class="padding-left--md">
-`SYNO.Docker.Registry` 
+`SYNO.Docker.Registry`
 </div>
-  
+
 #### Example return
 <details>
 <summary>Click to expand</summary>
@@ -439,7 +439,7 @@ Example return
 
 
 ### `network`
-Get list of docker networks.  
+Get list of docker networks.
 Example return
 --------------
 ```json
@@ -471,12 +471,12 @@ Example return
    "httpd_restart" : false,
    "success" : true
 }
-```  
+```
 #### Internal API
 <div class="padding-left--md">
-`SYNO.Docker.Network` 
+`SYNO.Docker.Network`
 </div>
-  
+
 #### Example return
 <details>
 <summary>Click to expand</summary>
@@ -518,24 +518,24 @@ Example return
 
 
 ### `search_image`
-Search for docker image in all available registries.  
-  
+Search for docker image in all available registries.
+
 #### Internal API
 <div class="padding-left--md">
-`SYNO.Docker.Registry` 
+`SYNO.Docker.Registry`
 </div>
-  
+
 #### Parameters
 <div class="padding-left--md">
-**_query_** `str`  
-name of the docker image to search for. Defaults to None.  
-  
+**_query_** `str`
+name of the docker image to search for. Defaults to None.
+
 
 </div>
 #### Returns
 <div class="padding-left--md">
-`dict[str, object]`  
-A dictionary containing the search results for the docker image.  
+`dict[str, object]`
+A dictionary containing the search results for the docker image.
 
 </div>
 #### Example return
@@ -581,7 +581,7 @@ A dictionary containing the search results for the docker image.
 
 
 ### `list_projects`
-Get list of projects.  
+Get list of projects.
 Example return
 --------------
 ```json
@@ -635,12 +635,12 @@ Example return
    "httpd_restart" : false,
    "success" : true
 }
-```  
+```
 #### Internal API
 <div class="padding-left--md">
-`SYNO.Docker.Project` 
+`SYNO.Docker.Project`
 </div>
-  
+
 #### Example return
 <details>
 <summary>Click to expand</summary>
@@ -704,24 +704,24 @@ Example return
 
 
 ### `get_project_info`
-Get information about a specific project.  
-  
+Get information about a specific project.
+
 #### Internal API
 <div class="padding-left--md">
-`SYNO.Docker.Project` 
+`SYNO.Docker.Project`
 </div>
-  
+
 #### Parameters
 <div class="padding-left--md">
-**_project_id_** `str`  
-ID of the project to get information about. Defaults to None.  
-  
+**_project_id_** `str`
+ID of the project to get information about. Defaults to None.
+
 
 </div>
 #### Returns
 <div class="padding-left--md">
-`dict[str, object]`  
-A dictionary containing the project information.  
+`dict[str, object]`
+A dictionary containing the project information.
 
 </div>
 #### Example return
@@ -1039,24 +1039,24 @@ A dictionary containing the project information.
 
 
 ### `start_container`
-Start a container by its name.  
-  
+Start a container by its name.
+
 #### Internal API
 <div class="padding-left--md">
-`SYNO.Docker.Container` 
+`SYNO.Docker.Container`
 </div>
-  
+
 #### Parameters
 <div class="padding-left--md">
-**_container_** `str`  
-The name of the container  
-  
+**_container_** `str`
+The name of the container
+
 
 </div>
 #### Returns
 <div class="padding-left--md">
-`dict[str, object]`  
-A dictionary containing the result of the export operation.  
+`dict[str, object]`
+A dictionary containing the result of the export operation.
 
 </div>
 #### Example return
@@ -1083,24 +1083,24 @@ A dictionary containing the result of the export operation.
 
 
 ### `stop_container`
-Stop a container by its name.  
-  
+Stop a container by its name.
+
 #### Internal API
 <div class="padding-left--md">
-`SYNO.Docker.Container` 
+`SYNO.Docker.Container`
 </div>
-  
+
 #### Parameters
 <div class="padding-left--md">
-**_container_** `str`  
-The name of the container  
-  
+**_container_** `str`
+The name of the container
+
 
 </div>
 #### Returns
 <div class="padding-left--md">
-`dict[str, object]`  
-A dictionary containing the result of the stop operation.  
+`dict[str, object]`
+A dictionary containing the result of the stop operation.
 
 </div>
 #### Example return
@@ -1126,29 +1126,29 @@ A dictionary containing the result of the stop operation.
 
 
 ### `export_container_settings`
-Export container profile  
-file \<container\>.syno.json will be created in the specified path.  
+Export container profile
+file \<container\>.syno.json will be created in the specified path.
 #### Internal API
 <div class="padding-left--md">
-`SYNO.Docker.Container.Profile` 
+`SYNO.Docker.Container.Profile`
 </div>
-  
+
 #### Parameters
 <div class="padding-left--md">
-**_container_** `str`  
-The name of the container  
-  
-**_path_** `str`  
+**_container_** `str`
+The name of the container
+
+**_path_** `str`
 The path on filesystem of Synology NAS where the container settings will be exported.
 If not specified, the file will be offered as a download through the browser.
-For example: `/docker/nging`  
-  
+For example: `/docker/nging`
+
 
 </div>
 #### Returns
 <div class="padding-left--md">
-`dict[str, object]`  
-A dictionary containing the result of the export operation.  
+`dict[str, object]`
+A dictionary containing the result of the export operation.
 
 </div>
 #### Example return
@@ -1169,28 +1169,28 @@ A dictionary containing the result of the export operation.
 
 
 ### `export_container`
-Export container profile and content to a specified path on Synology nas.  
-archive \<container\>.syno.txz will be created in the specified path.  
+Export container profile and content to a specified path on Synology nas.
+archive \<container\>.syno.txz will be created in the specified path.
 #### Internal API
 <div class="padding-left--md">
-`SYNO.Docker.Container` 
+`SYNO.Docker.Container`
 </div>
-  
+
 #### Parameters
 <div class="padding-left--md">
-**_container_** `str`  
-The name of the container  
-  
-**_path_** `str`  
+**_container_** `str`
+The name of the container
+
+**_path_** `str`
 The path on filesystem of Synology NAS where the container settings will be exported.
-For example: `/docker/nging`  
-  
+For example: `/docker/nging`
+
 
 </div>
 #### Returns
 <div class="padding-left--md">
-`dict[str, object]`  
-A dictionary containing the result of the export operation.  
+`dict[str, object]`
+A dictionary containing the result of the export operation.
 
 </div>
 #### Example return
@@ -1211,45 +1211,45 @@ A dictionary containing the result of the export operation.
 
 
 ### `get_logs`
-Get list of container logs.  
-  
+Get list of container logs.
+
 #### Internal API
 <div class="padding-left--md">
-`SYNO.Docker.Container.Log` 
+`SYNO.Docker.Container.Log`
 </div>
-  
+
 #### Parameters
 <div class="padding-left--md">
-**_name_** `str`  
-The name of the container  
-  
-**_from_date_** `str`  
-The start date for the logs. Defaults to None.  
-  
-**_to_date_** `str`  
-The end date for the logs. Defaults to None.  
-  
-**_level_** `str`  
-The log level to filter by. Defaults to None.  
-  
-**_keyword_** `str`  
-Keyword to filter logs. Defaults to None.  
-  
-**_sort_dir_** `str`  
-Sort direction for the logs, either 'ASC' or 'DESC'. Defaults to 'DESC'.  
-  
-**_offset_** `int`  
-The offset for pagination. Defaults to 0.  
-  
-**_limit_** `int`  
-The maximum number of logs to return. Defaults to 1000.  
-  
+**_name_** `str`
+The name of the container
+
+**_from_date_** `str`
+The start date for the logs. Defaults to None.
+
+**_to_date_** `str`
+The end date for the logs. Defaults to None.
+
+**_level_** `str`
+The log level to filter by. Defaults to None.
+
+**_keyword_** `str`
+Keyword to filter logs. Defaults to None.
+
+**_sort_dir_** `str`
+Sort direction for the logs, either 'ASC' or 'DESC'. Defaults to 'DESC'.
+
+**_offset_** `int`
+The offset for pagination. Defaults to 0.
+
+**_limit_** `int`
+The maximum number of logs to return. Defaults to 1000.
+
 
 </div>
 #### Returns
 <div class="padding-left--md">
-`dict[str, object]`  
-A dictionary containing the logs from the specified container.  
+`dict[str, object]`
+A dictionary containing the logs from the specified container.
 
 </div>
 #### Example return
@@ -1281,17 +1281,17 @@ A dictionary containing the logs from the specified container.
 
 
 ### `docker_stats`
-Get containers resource usage statistics.  
-  
+Get containers resource usage statistics.
+
 #### Internal API
 <div class="padding-left--md">
-`SYNO.Docker.Container` 
+`SYNO.Docker.Container`
 </div>
-  
+
 #### Returns
 <div class="padding-left--md">
-`dict[str, object]`  
-A dictionary containing the resource usage statistics of the containers.  
+`dict[str, object]`
+A dictionary containing the resource usage statistics of the containers.
 
 </div>
 #### Example return
