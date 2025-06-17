@@ -6,7 +6,7 @@ title: ✅ ActiveBackupMicrosoft
 <!-- -------------------------------------------- -->
 <!-- THIS FILE IS AUTO-GENERATED. DO NOT MODIFY.  -->
 <!-- -------------------------------------------- -->
-
+  
 # ActiveBackupMicrosoft
 ## Overview
 Active Backup for Microsoft 365 Implementation.
@@ -32,17 +32,17 @@ Active Backup for Microsoft 365 Implementation.
     - Relink task
 ## Methods
 ### `get_tasks`
-Retrieve all tasks.
-
+Retrieve all tasks.  
+  
 #### Internal API
 <div class="padding-left--md">
-`SYNO.ActiveBackupOffice365`
+`SYNO.ActiveBackupOffice365` 
 </div>
-
+  
 #### Returns
 <div class="padding-left--md">
-`dict[str, object]`
-A dictionary containing the list of tasks.
+`dict[str, object]`  
+A dictionary containing the list of tasks.  
 
 </div>
 #### Example return
@@ -253,27 +253,27 @@ A dictionary containing the list of tasks.
 
 
 ### `get_package_log`
-Retrieve general logs.
-
+Retrieve general logs.  
+  
 #### Internal API
 <div class="padding-left--md">
-`SYNO.ActiveBackupOffice365`
+`SYNO.ActiveBackupOffice365` 
 </div>
-
+  
 #### Parameters
 <div class="padding-left--md">
-**_offset_** `int`
-The offset of the logs to retrieve. Defaults to `0`.
-
-**_limit_** `int`
-The maximum number of logs to retrieve. Defaults to `200`.
-
+**_offset_** `int`  
+The offset of the logs to retrieve. Defaults to `0`.  
+  
+**_limit_** `int`  
+The maximum number of logs to retrieve. Defaults to `200`.  
+  
 
 </div>
 #### Returns
 <div class="padding-left--md">
-`dict[str, object]`
-A dictionary containing the list of logs.
+`dict[str, object]`  
+A dictionary containing the list of logs.  
 
 </div>
 #### Example return
@@ -327,33 +327,33 @@ A dictionary containing the list of logs.
 
 
 ### `get_task_log`
-Retrieve all logs for a given task.
-
+Retrieve all logs for a given task.  
+  
 #### Internal API
 <div class="padding-left--md">
-`SYNO.ActiveBackupOffice365`
+`SYNO.ActiveBackupOffice365` 
 </div>
-
+  
 #### Parameters
 <div class="padding-left--md">
-**_task_id_** `int`
-The ID of the task.
-
-**_limit_** `int`
-The maximum number of logs to retrieve. Defaults to `200`.
-
-**_offset_** `int`
-The offset of the logs to retrieve. Defaults to `0`.
-
-**_key_word_** `str`
-A keyword to filter logs. Defaults to `''`.
-
+**_task_id_** `int`  
+The ID of the task.  
+  
+**_limit_** `int`  
+The maximum number of logs to retrieve. Defaults to `200`.  
+  
+**_offset_** `int`  
+The offset of the logs to retrieve. Defaults to `0`.  
+  
+**_key_word_** `str`  
+A keyword to filter logs. Defaults to `''`.  
+  
 
 </div>
 #### Returns
 <div class="padding-left--md">
-`dict[str, object]`
-A dictionary containing the list of logs.
+`dict[str, object]`  
+A dictionary containing the list of logs.  
 
 </div>
 #### Example return
@@ -401,24 +401,24 @@ A dictionary containing the list of logs.
 
 
 ### `get_task_setting`
-Retrieve the settings of a task.
-
+Retrieve the settings of a task.  
+  
 #### Internal API
 <div class="padding-left--md">
-`SYNO.ActiveBackupOffice365`
+`SYNO.ActiveBackupOffice365` 
 </div>
-
+  
 #### Parameters
 <div class="padding-left--md">
-**_task_id_** `int `
-The ID of the task.
-
+**_task_id_** `int`  
+The ID of the task.  
+  
 
 </div>
 #### Returns
 <div class="padding-left--md">
-`dict[str, object]`
-A dictionary containing the settings of the task.
+`dict[str, object]`  
+A dictionary containing the settings of the task.  
 
 </div>
 #### Example return
@@ -577,17 +577,17 @@ A dictionary containing the settings of the task.
 
 
 ### `get_worker_count`
-Get the number of workers for the Active Backup for Microsoft 365 package.
-
+Get the number of workers for the Active Backup for Microsoft 365 package.  
+  
 #### Internal API
 <div class="padding-left--md">
-`SYNO.ActiveBackupOffice365`
+`SYNO.ActiveBackupOffice365` 
 </div>
-
+  
 #### Returns
 <div class="padding-left--md">
-`dict[str, object]`
-A dictionary containing the number of workers.
+`dict[str, object]`  
+A dictionary containing the number of workers.  
 
 </div>
 #### Example return
@@ -612,27 +612,27 @@ A dictionary containing the number of workers.
 
 
 ### `set_worker_count`
-Set the number of workers for the Active Backup for Microsoft 365 package.
-
+Set the number of workers for the Active Backup for Microsoft 365 package.  
+  
 #### Internal API
 <div class="padding-left--md">
-`SYNO.ActiveBackupOffice365`
+`SYNO.ActiveBackupOffice365` 
 </div>
-
+  
 #### Parameters
 <div class="padding-left--md">
-**_backup_job_workers_** `int `
-Maximum number of concurrent backup accounts. Defaults to `40`.
-
-**_event_workers_** `int `
-Maximum number of concurrent backup files. Defaults to `40`.
-
+**_backup_job_workers_** `int`  
+Maximum number of concurrent backup accounts. Defaults to `40`.  
+  
+**_event_workers_** `int`  
+Maximum number of concurrent backup files. Defaults to `40`.  
+  
 
 </div>
 #### Returns
 <div class="padding-left--md">
-`dict[str, object]`
-A dictionary containing the result of the worker count update.
+`dict[str, object]`  
+A dictionary containing the result of the worker count update.  
 
 </div>
 #### Example return
@@ -651,37 +651,37 @@ A dictionary containing the result of the worker count update.
 
 
 ### `set_task_schedule`
-Set the schedule for a given task.
-
+Set the schedule for a given task.  
+  
 #### Internal API
 <div class="padding-left--md">
-`SYNO.ActiveBackupOffice365`
+`SYNO.ActiveBackupOffice365` 
 </div>
-
+  
 #### Parameters
 <div class="padding-left--md">
-**_task_id_** `int`
-The ID of the task.
-
-**_policy_** `int`
-The schedule policy.
+**_task_id_** `int`  
+The ID of the task.  
+  
+**_policy_** `int`  
+The schedule policy.  
 Possible values:
 - 0 = continuous
 - 1 = manual
-- 2 = scheduled
-
-**_schedule_** `dict`
-A dictionary containing the schedule settings.
+- 2 = scheduled  
+  
+**_schedule_** `dict`  
+A dictionary containing the schedule settings.  
 Possible values:
 - `start_hour` (int): The start hour of the schedule.
 - `start_minute` (int): The start minute of the schedule.
 - `last_run_hour` (int): The last run hour of the schedule.
 - `repeat_every_hours` (int): Run the backup every X hours.
-- `run_days` (list[int]): Run the backup at the specified days (Sunday = 0, Morning = 1, and so on...).
+- `run_days` (list[int]): Run the backup at the specified days (Sunday = 0, Morning = 1, and so on...).  
 :::note
-
- If `repeat_every_hours` is set to 0, the backup will run once a day.
-
+ 
+ If `repeat_every_hours` is set to 0, the backup will run once a day.  
+ 
 :::
 
 Example, to run the backup every day hourly starting at 08:30 until 23:30.
@@ -693,14 +693,14 @@ Example, to run the backup every day hourly starting at 08:30 until 23:30.
     "repeat_every_hours": 1,
     "run_days": [0, 1, 2, 3, 4, 5, 6]
 }
-```
-
+```  
+  
 
 </div>
 #### Returns
 <div class="padding-left--md">
-`dict[str, object]`
-A dictionary containing the result of the schedule update.
+`dict[str, object]`  
+A dictionary containing the result of the schedule update.  
 
 </div>
 #### Example return
@@ -719,27 +719,27 @@ A dictionary containing the result of the schedule update.
 
 
 ### `set_rotation_policy`
-Set the rotation policy for a given task.
-
+Set the rotation policy for a given task.  
+  
 #### Internal API
 <div class="padding-left--md">
-`SYNO.ActiveBackupOffice365`
+`SYNO.ActiveBackupOffice365` 
 </div>
-
+  
 #### Parameters
 <div class="padding-left--md">
-**_task_id_** `int`
-The ID of the task.
-
-**_days_to_keep_** `int`
-The amount of days to keep previous versions. Defaults to `0` (keep all versions).
-
+**_task_id_** `int`  
+The ID of the task.  
+  
+**_days_to_keep_** `int`  
+The amount of days to keep previous versions. Defaults to `0` (keep all versions).  
+  
 
 </div>
 #### Returns
 <div class="padding-left--md">
-`dict[str, object]`
-A dictionary containing the result of the rotation policy update.
+`dict[str, object]`  
+A dictionary containing the result of the rotation policy update.  
 
 </div>
 #### Example return
@@ -758,24 +758,24 @@ A dictionary containing the result of the rotation policy update.
 
 
 ### `run_backup`
-Manually run backup for a given task id.
-
+Manually run backup for a given task id.  
+  
 #### Internal API
 <div class="padding-left--md">
-`SYNO.ActiveBackupOffice365`
+`SYNO.ActiveBackupOffice365` 
 </div>
-
+  
 #### Parameters
 <div class="padding-left--md">
-**_task_id_** `int`
-The ID of the task.
-
+**_task_id_** `int`  
+The ID of the task.  
+  
 
 </div>
 #### Returns
 <div class="padding-left--md">
-`dict[str, object]`
-A dictionary containing the result of the backup task.
+`dict[str, object]`  
+A dictionary containing the result of the backup task.  
 
 </div>
 #### Example return
@@ -794,24 +794,24 @@ A dictionary containing the result of the backup task.
 
 
 ### `cancel_backup`
-Cancel a running backup task.
-
+Cancel a running backup task.  
+  
 #### Internal API
 <div class="padding-left--md">
-`SYNO.ActiveBackupOffice365`
+`SYNO.ActiveBackupOffice365` 
 </div>
-
+  
 #### Parameters
 <div class="padding-left--md">
-**_task_id_** `int`
-The ID of the task.
-
+**_task_id_** `int`  
+The ID of the task.  
+  
 
 </div>
 #### Returns
 <div class="padding-left--md">
-`dict[str, object]`
-A dictionary containing the result of the task cancellation.
+`dict[str, object]`  
+A dictionary containing the result of the task cancellation.  
 
 </div>
 #### Example return
@@ -830,38 +830,38 @@ A dictionary containing the result of the task cancellation.
 
 
 ### `delete_task`
-Delete a task.
+Delete a task.  
 :::warning
-
- Miss-use of this action may lead to data loss.
-
+ 
+ Miss-use of this action may lead to data loss.  
+ 
 :::
 
 #### Internal API
 <div class="padding-left--md">
-`SYNO.ActiveBackupOffice365`
+`SYNO.ActiveBackupOffice365` 
 </div>
-
+  
 #### Parameters
 <div class="padding-left--md">
-**_task_id_** `int`
-The ID of the task.
-
-**_remove_data_** `bool`
-Whether to remove the backup data in the NAS. Defaults to `False`.
+**_task_id_** `int`  
+The ID of the task.  
+  
+**_remove_data_** `bool`  
+Whether to remove the backup data in the NAS. Defaults to `False`.  
 :::warning
-
- If this is set to `True`, all task data in the NAS will be lost and the task cannot be relinked in the future.
-
+ 
+ If this is set to `True`, all task data in the NAS will be lost and the task cannot be relinked in the future.  
+ 
 :::
 
-
+  
 
 </div>
 #### Returns
 <div class="padding-left--md">
-`dict[str, object]`
-A dictionary containing the result of the task deletion.
+`dict[str, object]`  
+A dictionary containing the result of the task deletion.  
 
 </div>
 #### Example return
@@ -880,38 +880,38 @@ A dictionary containing the result of the task deletion.
 
 
 ### `relink_task`
-Relink a task.
-
+Relink a task.  
+  
 #### Internal API
 <div class="padding-left--md">
-`SYNO.ActiveBackupOffice365`
+`SYNO.ActiveBackupOffice365` 
 </div>
-
+  
 #### Parameters
 <div class="padding-left--md">
-**_task_name_** `str`
-The name of the task.
-
-**_shared_folder_** `str`
-The name of the shared folder where the task is stored.
-Example: `ActiveBackupforBusiness`
-
-**_task_path_** `str`
-The relative path from the the shared folder where the task is stored.
-Example: `/ActiveBackupForMicrosoft365/task_1`
-
-**_admin_email_** `str`
-The email of the Microsoft 365 administrator.
-
-**_region_** `str`
-The region of the Microsoft 365 account. Defaults to `Microsoft 365`
-
+**_task_name_** `str`  
+The name of the task.  
+  
+**_shared_folder_** `str`  
+The name of the shared folder where the task is stored.  
+Example: `ActiveBackupforBusiness`  
+  
+**_task_path_** `str`  
+The relative path from the the shared folder where the task is stored.  
+Example: `/ActiveBackupForMicrosoft365/task_1`  
+  
+**_admin_email_** `str`  
+The email of the Microsoft 365 administrator.  
+  
+**_region_** `str`  
+The region of the Microsoft 365 account. Defaults to `Microsoft 365`  
+  
 
 </div>
 #### Returns
 <div class="padding-left--md">
-`dict[str, object]`
-A dictionary containing the result of the task relinking.
+`dict[str, object]`  
+A dictionary containing the result of the task relinking.  
 
 </div>
 #### Example return

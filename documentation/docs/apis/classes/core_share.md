@@ -6,62 +6,62 @@ title: 🚧 Share
 <!-- -------------------------------------------- -->
 <!-- THIS FILE IS AUTO-GENERATED. DO NOT MODIFY.  -->
 <!-- -------------------------------------------- -->
-
+  
 :::tip
+ 
+This page contains documentation for the `Share` class and its subclasses:  
+-  [SharePermission](#sharepermission)   
+-  [KeyManagerStore](#keymanagerstore)   
+-  [KeyManagerAutoKey](#keymanagerautokey)   
 
-This page contains documentation for the `Share` class and its subclasses:
--  [SharePermission](#sharepermission)
--  [KeyManagerStore](#keymanagerstore)
--  [KeyManagerAutoKey](#keymanagerautokey)
-
-
+ 
 :::
 # Share
 :::warning
-
+ 
 This API is partially documented or under construction.
-
+ 
 :::
 ## Overview
 Core Share API implementation.
 ## Methods
 ### `validate_set`
-Validate set of parameter for a new / modified shared folder
-
+Validate set of parameter for a new / modified shared folder  
+  
 #### Internal API
 <div class="padding-left--md">
-`SYNO.Core.Share`
+`SYNO.Core.Share` 
 </div>
-
+  
 #### Parameters
 <div class="padding-left--md">
-**_name_** `str`
-Share name.
-
-**_vol_path_** `str`
-Volume path.
-
-**_desc_** `str`
-Share description. Defaults to `""`.
-
-**_enable_share_compress_** `bool`
-Enable share compress. Defaults to `False`.
-
-**_enable_share_cow_** `bool`
-Enable share cow. Defaults to `False`.
-
-**_enc_passwd_** `str`
-Encrypted password. Defaults to `""`.
-
-**_encryption_** `bool`
-Enable encryption. Defaults to `False`.
-
+**_name_** `str`  
+Share name.  
+  
+**_vol_path_** `str`  
+Volume path.  
+  
+**_desc_** `str`  
+Share description. Defaults to `""`.  
+  
+**_enable_share_compress_** `bool`  
+Enable share compress. Defaults to `False`.  
+  
+**_enable_share_cow_** `bool`  
+Enable share cow. Defaults to `False`.  
+  
+**_enc_passwd_** `str`  
+Encrypted password. Defaults to `""`.  
+  
+**_encryption_** `bool`  
+Enable encryption. Defaults to `False`.  
+  
 
 </div>
 #### Returns
 <div class="padding-left--md">
-`dict`
-Success.
+`dict`  
+Success.  
 
 </div>
 #### Example return
@@ -80,19 +80,19 @@ Success.
 
 
 ### `list_folders`
-List all folders informations
-
+List all folders informations  
+  
 #### Internal API
 <div class="padding-left--md">
-`SYNO.Core.Share`
+`SYNO.Core.Share` 
 </div>
-
+  
 #### Parameters
 <div class="padding-left--md">
-**_share_type_** `str`
-Share type. Defaults to `all`.
-
-**_additional_** `list[str]`
+**_share_type_** `str`  
+Share type. Defaults to `all`.  
+  
+**_additional_** `list[str]`  
 Additional fields to retrieve. Defaults to `[]`.
 All fields known are: `[
     "hidden","encryption","is_aclmode","unite_permission","is_support_acl","is_sync_share","is_force_readonly","force_readonly_reason",
@@ -100,14 +100,14 @@ All fields known are: `[
     "is_offline_share","support_snapshot","share_quota","enable_share_compress","enable_share_cow","enable_share_tiering",
     "load_worm_attr","include_cold_storage_share","is_cold_storage_share","include_missing_share","is_missing_share",
     "include_offline_share","is_offline_share","include_worm_share"
-]`.
-
+]`.  
+  
 
 </div>
 #### Returns
 <div class="padding-left--md">
-`dict`
-A dictionary containing the shared folders information.
+`dict`  
+A dictionary containing the shared folders information.  
 
 </div>
 #### Example return
@@ -138,28 +138,28 @@ A dictionary containing the shared folders information.
 
 
 ### `get_folder`
-Get a folder by name
-
+Get a folder by name  
+  
 #### Internal API
 <div class="padding-left--md">
-`SYNO.Core.Share`
+`SYNO.Core.Share` 
 </div>
-
+  
 #### Parameters
 <div class="padding-left--md">
-**_name_** `str`
-Share name.
-
-**_additional_** `list`
+**_name_** `str`  
+Share name.  
+  
+**_additional_** `list`  
 Additional fields to retrieve. Defaults to `[]`.
-All fields known are: `["disable_list","disable_modify","disable_download","unite_permission","is_aclmode"]`.
-
+All fields known are: `["disable_list","disable_modify","disable_download","unite_permission","is_aclmode"]`.  
+  
 
 </div>
 #### Returns
 <div class="padding-left--md">
-`dict`
-A dictionary containing the shared folder information.
+`dict`  
+A dictionary containing the shared folder information.  
 
 </div>
 #### Example return
@@ -189,54 +189,54 @@ A dictionary containing the shared folder information.
 
 
 ### `create_folder`
-Create a new shared folder
-
+Create a new shared folder  
+  
 #### Internal API
 <div class="padding-left--md">
-`SYNO.Core.Share`
+`SYNO.Core.Share` 
 </div>
-
+  
 #### Parameters
 <div class="padding-left--md">
-**_name_** `str`
-Share name.
-
-**_vol_path_** `str`
-Volume path.
-
-**_desc_** `str`
-Share description. Defaults to `""`.
-
-**_hidden_** `bool`
-Hide share. Defaults to `False`.
-
-**_enable_recycle_bin_** `bool`
-Enable recycle bin. Defaults to `True`.
-
-**_recycle_bin_admin_only_** `bool`
-Recycle bin admin only. Defaults to `True`.
-
-**_hide_unreadable_** `bool`
-Hide unreadable. Defaults to `False`.
-
-**_enable_share_cow_** `bool`
-Enable share cow. Defaults to `False`.
-
-**_enable_share_compress_** `bool`
-Enable share compress. Defaults to `False`.
-
-**_share_quota_** `int, optional `
-Share quota. Defaults to `0`.
-
-**_name_org_** `str, optional `
-Defaults to `""`.
-
+**_name_** `str`  
+Share name.  
+  
+**_vol_path_** `str`  
+Volume path.  
+  
+**_desc_** `str`  
+Share description. Defaults to `""`.  
+  
+**_hidden_** `bool`  
+Hide share. Defaults to `False`.  
+  
+**_enable_recycle_bin_** `bool`  
+Enable recycle bin. Defaults to `True`.  
+  
+**_recycle_bin_admin_only_** `bool`  
+Recycle bin admin only. Defaults to `True`.  
+  
+**_hide_unreadable_** `bool`  
+Hide unreadable. Defaults to `False`.  
+  
+**_enable_share_cow_** `bool`  
+Enable share cow. Defaults to `False`.  
+  
+**_enable_share_compress_** `bool`  
+Enable share compress. Defaults to `False`.  
+  
+**_share_quota_** `int`  
+Share quota. Defaults to `0`.  
+  
+**_name_org_** `str`  
+Defaults to `""`.  
+  
 
 </div>
 #### Returns
 <div class="padding-left--md">
-`dict`
-Name of the created shared folder
+`dict`  
+Name of the created shared folder  
 
 </div>
 #### Example return
@@ -257,24 +257,24 @@ Name of the created shared folder
 
 
 ### `delete_folders`
-Delete folder(s) by name(s)
-
+Delete folder(s) by name(s)  
+  
 #### Internal API
 <div class="padding-left--md">
-`SYNO.Core.Share`
+`SYNO.Core.Share` 
 </div>
-
+  
 #### Parameters
 <div class="padding-left--md">
-**_name_** `List[str]`
-Share names.
-
+**_name_** `List[str]`  
+Share names.  
+  
 
 </div>
 #### Returns
 <div class="padding-left--md">
-`dict`
-Success.
+`dict`  
+Success.  
 
 </div>
 #### Example return
@@ -293,54 +293,54 @@ Success.
 
 
 ### `clone`
-Clone existing shared folder.
-
+Clone existing shared folder.  
+  
 #### Internal API
 <div class="padding-left--md">
-`SYNO.Core.Share`
+`SYNO.Core.Share` 
 </div>
-
+  
 #### Parameters
 <div class="padding-left--md">
-**_name_** `str`
-New shared folder name.
-
-**_name_org_** `str`
-Original shared folder name.
-
-**_vol_path_** `str`
-Volume path.
-
-**_desc_** `str`
-Shared folder description. Defaults to `""`.
-
-**_hidden_** `bool`
-Hide shared folder. Defaults to `False`.
-
-**_enable_recycle_bin_** `bool`
-Enable recycle bin. Defaults to `True`.
-
-**_recycle_bin_admin_only_** `bool`
-Recycle bin admin only. Defaults to `True`.
-
-**_hide_unreadable_** `bool`
-Hide unreadable. Defaults to `False`.
-
-**_enable_share_cow_** `bool`
-Enable share cow. Defaults to `False`.
-
-**_enable_share_compress_** `bool`
-Enable share compress. Defaults to `False`.
-
-**_share_quota_** `int`
-Share quota. Defaults to `0`.
-
+**_name_** `str`  
+New shared folder name.  
+  
+**_name_org_** `str`  
+Original shared folder name.  
+  
+**_vol_path_** `str`  
+Volume path.  
+  
+**_desc_** `str`  
+Shared folder description. Defaults to `""`.  
+  
+**_hidden_** `bool`  
+Hide shared folder. Defaults to `False`.  
+  
+**_enable_recycle_bin_** `bool`  
+Enable recycle bin. Defaults to `True`.  
+  
+**_recycle_bin_admin_only_** `bool`  
+Recycle bin admin only. Defaults to `True`.  
+  
+**_hide_unreadable_** `bool`  
+Hide unreadable. Defaults to `False`.  
+  
+**_enable_share_cow_** `bool`  
+Enable share cow. Defaults to `False`.  
+  
+**_enable_share_compress_** `bool`  
+Enable share compress. Defaults to `False`.  
+  
+**_share_quota_** `int`  
+Share quota. Defaults to `0`.  
+  
 
 </div>
 #### Returns
 <div class="padding-left--md">
-`dict`
-Name of the created shared folder
+`dict`  
+Name of the created shared folder  
 
 </div>
 #### Example return
@@ -365,43 +365,43 @@ Name of the created shared folder
 Core Share Permission API implementation.
 ## Methods
 ### `get_folder_permission_by_name`
-Retrieve share permissions for a given folder filtered by permission name (sub string)
-
+Retrieve share permissions for a given folder filtered by permission name (sub string)  
+  
 #### Internal API
 <div class="padding-left--md">
-`SYNO.Core.Share.Permission`
+`SYNO.Core.Share.Permission` 
 </div>
-
+  
 #### Parameters
 <div class="padding-left--md">
-**_name_** `str`
-The folder name to list permissions for.
-
-**_permission_substr_** `str`
-The substring to search for in the permissions.
-
-**_offset_** `int`
-The offset to start at. Defaults to `0`.
-
-**_limit_** `int`
-The maximum number of results to return. Defaults to `50`.
-
-**_is_unite_permission_** `bool`
-Whether to return unified permissions. Defaults to `False`.
-
-**_with_inherit_** `bool`
-Whether to include inherited permissions. Defaults to `False`.
-
-**_user_group_type_** `str`
+**_name_** `str`  
+The folder name to list permissions for.  
+  
+**_permission_substr_** `str`  
+The substring to search for in the permissions.  
+  
+**_offset_** `int`  
+The offset to start at. Defaults to `0`.  
+  
+**_limit_** `int`  
+The maximum number of results to return. Defaults to `50`.  
+  
+**_is_unite_permission_** `bool`  
+Whether to return unified permissions. Defaults to `False`.  
+  
+**_with_inherit_** `bool`  
+Whether to include inherited permissions. Defaults to `False`.  
+  
+**_user_group_type_** `str`  
 The type of user group to list permissions for. Defaults to `"local_user"`.
-All known values are: `["system", "local_user", "local_group", "ldap_user", "ldap_group"]`.
-
+All known values are: `["system", "local_user", "local_group", "ldap_user", "ldap_group"]`.  
+  
 
 </div>
 #### Returns
 <div class="padding-left--md">
-`dict `
-List of permission(s) on the folder
+`dict`  
+List of permission(s) on the folder  
 
 </div>
 #### Example return
@@ -434,40 +434,40 @@ List of permission(s) on the folder
 
 
 ### `get_folder_permissions`
-Retrieve share permissions for a given folder.
-
+Retrieve share permissions for a given folder.  
+  
 #### Internal API
 <div class="padding-left--md">
-`SYNO.Core.Share.Permission`
+`SYNO.Core.Share.Permission` 
 </div>
-
+  
 #### Parameters
 <div class="padding-left--md">
-**_name_** `str`
-The folder name to list permissions for.
-
-**_offset_** `int`
-The offset to start at. Defaults to `0`.
-
-**_limit_** `int`
-The maximum number of results to return. Defaults to `50`.
-
-**_is_unite_permission_** `bool`
-Whether to return unified permissions. Defaults to `False`.
-
-**_with_inherit_** `bool`
-Whether to include inherited permissions. Defaults to `False`.
-
-**_user_group_type_** `str`
+**_name_** `str`  
+The folder name to list permissions for.  
+  
+**_offset_** `int`  
+The offset to start at. Defaults to `0`.  
+  
+**_limit_** `int`  
+The maximum number of results to return. Defaults to `50`.  
+  
+**_is_unite_permission_** `bool`  
+Whether to return unified permissions. Defaults to `False`.  
+  
+**_with_inherit_** `bool`  
+Whether to include inherited permissions. Defaults to `False`.  
+  
+**_user_group_type_** `str`  
 The type of user group to list permissions for. Defaults to `"local_user"`.
-All known values are: `["system", "local_user", "local_group", "ldap_user", "ldap_group"]`.
-
+All known values are: `["system", "local_user", "local_group", "ldap_user", "ldap_group"]`.  
+  
 
 </div>
 #### Returns
 <div class="padding-left--md">
-`dict`
-All permissions on the folder
+`dict`  
+All permissions on the folder  
 
 </div>
 #### Example return
@@ -527,23 +527,23 @@ All permissions on the folder
 
 
 ### `set_folder_permissions`
-Set folder permissions for a given folder.
-
+Set folder permissions for a given folder.  
+  
 #### Internal API
 <div class="padding-left--md">
-`SYNO.Core.Share.Permission`
+`SYNO.Core.Share.Permission` 
 </div>
-
+  
 #### Parameters
 <div class="padding-left--md">
-**_name_** `str`
-The folder name to set permissions for.
-
-**_user_group_type_** `str`
+**_name_** `str`  
+The folder name to set permissions for.  
+  
+**_user_group_type_** `str`  
 The type of user group to set permissions for.
-All known values are: `["system", "local_user", "local_group", "ldap_user", "ldap_group"]`.
-
-**_permissions_** `dict`
+All known values are: `["system", "local_user", "local_group", "ldap_user", "ldap_group"]`.  
+  
+**_permissions_** `dict`  
 The permissions to set for the folder.
 Example:
 ```json
@@ -556,14 +556,14 @@ Example:
         "is_custom":false
     }
 ]
-```
-
+```  
+  
 
 </div>
 #### Returns
 <div class="padding-left--md">
-`dict `
-Success
+`dict`  
+Success  
 
 </div>
 #### Example return
@@ -582,24 +582,24 @@ Success
 
 
 ### `get_local_group_permissions`
-Retrieve share permissions for a given group.
-
+Retrieve share permissions for a given group.  
+  
 #### Internal API
 <div class="padding-left--md">
-`SYNO.Core.Share.Permission`
+`SYNO.Core.Share.Permission` 
 </div>
-
+  
 #### Parameters
 <div class="padding-left--md">
-**_group_** `str`
-The group to list permissions for.
-
+**_group_** `str`  
+The group to list permissions for.  
+  
 
 </div>
 #### Returns
 <div class="padding-left--md">
-`dict`
-Permissions of a group on Shared folders
+`dict`  
+Permissions of a group on Shared folders  
 
 </div>
 #### Example return
@@ -635,19 +635,19 @@ Permissions of a group on Shared folders
 
 
 ### `set_local_group_permissions`
-Set group permissions for a given share.
-
+Set group permissions for a given share.  
+  
 #### Internal API
 <div class="padding-left--md">
-`SYNO.Core.Share.Permission`
+`SYNO.Core.Share.Permission` 
 </div>
-
+  
 #### Parameters
 <div class="padding-left--md">
-**_group_** `str`
-The group to set the permissions for.
-
-**_permissions_** `list[dict[str, Any]]`
+**_group_** `str`  
+The group to set the permissions for.  
+  
+**_permissions_** `list[dict[str, Any]]`  
 The permissions to set for the group.
 Example:
 ```
@@ -665,14 +665,14 @@ Example:
         "is_deny": False
     }
 ]
-```
-
+```  
+  
 
 </div>
 #### Returns
 <div class="padding-left--md">
-`dict`
-Success
+`dict`  
+Success  
 
 </div>
 #### Example return
@@ -695,13 +695,13 @@ Success
 Core Share KeyManager Store API implementation.
 ## Methods
 ### `init`
-Initialize KeyManagerStore API.
-
+Initialize KeyManagerStore API.  
+  
 #### Internal API
 <div class="padding-left--md">
-`SYNO.Core.Share.KeyManager.Store`
+`SYNO.Core.Share.KeyManager.Store` 
 </div>
-
+  
 
 
 
@@ -716,17 +716,17 @@ Initialize KeyManagerStore API.
 
 
 ### `explore`
-Explore KeyManagerStore API. Get list of existing stores
-
+Explore KeyManagerStore API. Get list of existing stores  
+  
 #### Internal API
 <div class="padding-left--md">
-`SYNO.Core.Share.KeyManager.Store`
+`SYNO.Core.Share.KeyManager.Store` 
 </div>
-
+  
 #### Returns
 <div class="padding-left--md">
-`dict`
-List of stores existing on the NAS
+`dict`  
+List of stores existing on the NAS  
 
 </div>
 #### Example return
@@ -752,17 +752,17 @@ List of stores existing on the NAS
 Core Share KeyManager AutoKey API implementation.
 ## Methods
 ### `list`
-List KeyManagerStore API.
-
+List KeyManagerStore API.  
+  
 #### Internal API
 <div class="padding-left--md">
-`SYNO.Core.Share.KeyManager.AutoKey`
+`SYNO.Core.Share.KeyManager.AutoKey` 
 </div>
-
+  
 #### Returns
 <div class="padding-left--md">
-`dict`
-List of keys in the manager
+`dict`  
+List of keys in the manager  
 
 </div>
 #### Example return

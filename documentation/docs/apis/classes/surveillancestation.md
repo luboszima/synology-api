@@ -6,12 +6,12 @@ title: 🚧 SurveillanceStation
 <!-- -------------------------------------------- -->
 <!-- THIS FILE IS AUTO-GENERATED. DO NOT MODIFY.  -->
 <!-- -------------------------------------------- -->
-
+  
 # SurveillanceStation
 :::warning
-
+ 
 This API is not documented yet.
-
+ 
 :::
 ## Overview
 
@@ -38,20 +38,20 @@ This API is not documented yet.
 
 
 ### `get_camera_info`
-This function return information about a camera.
-cameraIds : This parameter is named cameraIds in the API documentation but it refer to 1 camera ID
+This function return information about a camera.  
+cameraIds : This parameter is named cameraIds in the API documentation but it refer to 1 camera ID  
 privCamType: int = 1
     SYNO.SS.CamPriv.LIVEVIEW = 1;
     SYNO.SS.CamPriv.PLAYBACK = 2;
     SYNO.SS.CamPriv.LENS = 4;
     SYNO.SS.CamPriv.AUDIO = 8;
-    SYNO.SS.CamPriv.DIGIOUT = 16;
-All other parameters must be let to default value
+    SYNO.SS.CamPriv.DIGIOUT = 16;  
+All other parameters must be let to default value  
 #### Internal API
 <div class="padding-left--md">
-`SYNO.SurveillanceStation.Camera`
+`SYNO.SurveillanceStation.Camera` 
 </div>
-
+  
 
 
 
@@ -66,13 +66,13 @@ All other parameters must be let to default value
 
 
 ### `get_snapshot`
-By default, the profileType is 1, which is the default profile.
-Binary data is returned, so the response is not a json object.
+By default, the profileType is 1, which is the default profile.  
+Binary data is returned, so the response is not a json object.  
 #### Internal API
 <div class="padding-left--md">
-`SYNO.SurveillanceStation.Camera`
+`SYNO.SurveillanceStation.Camera` 
 </div>
-
+  
 
 
 
@@ -458,20 +458,20 @@ Binary data is returned, so the response is not a json object.
 
 
 ### `download_merged_recording_files`
-Download the merged files of UTC time range recordings of target camera.
+Download the merged files of UTC time range recordings of target camera.  
 If there are different resolution or codec within UTC time range, the recordings will merge as much as possible
-and downlod file will be a zip file.
+and downlod file will be a zip file.  
 This method will start a task which have keep-alive mechanism.
 Use GetRangeExportProgress method to get newest progress and keep-alive.
 After receiving progress 100, use OnRangeExportDone method to download exported recording within 1
 minutes.
 If you want to cancel range export task, just do not send GetRangeExportProgress method or
-OnRangeExportDone method. System will cleanup processed files itself.
+OnRangeExportDone method. System will cleanup processed files itself.  
 #### Internal API
 <div class="padding-left--md">
-`SYNO.SurveillanceStation.Recording`
+`SYNO.SurveillanceStation.Recording` 
 </div>
-
+  
 
 
 
@@ -486,24 +486,24 @@ OnRangeExportDone method. System will cleanup processed files itself.
 
 
 ### `download_recording_from_target`
-Response
+Response  
 MP4 or zip file data.
-The response type can be found in fileExt of GetRangeExportProgress method response when progress 100.
+The response type can be found in fileExt of GetRangeExportProgress method response when progress 100.  
 Note
 GetRangeExportProgress method must be sent within 1 minute after corresponding RangeExport method task
-is completed, otherwise the exported recordings will be cleared.
+is completed, otherwise the exported recordings will be cleared.  
 2.3.11.20 API Error Code
 Code Description
 400 Execution failed.
 401 Parameter invalid.
 405 CMS server connection failed.
 414 Some events not exist.
-439 Too many items selected.
+439 Too many items selected.  
 #### Internal API
 <div class="padding-left--md">
-`SYNO.SurveillanceStation.Recording`
+`SYNO.SurveillanceStation.Recording` 
 </div>
-
+  
 
 
 
@@ -560,15 +560,15 @@ Code Description
 
 
 ### `redirect_webapi_to_target_ds`
-webAPI Array of `webAPI_info`
+webAPI Array of `webAPI_info`  
 Example:
 `webAPI={"api": "SYNO.SurveillanceStation.AddOns", "version": 1, "method":
-"List"}`
+"List"}`  
 #### Internal API
 <div class="padding-left--md">
-`SYNO.SurveillanceStation.CMS`
+`SYNO.SurveillanceStation.CMS` 
 </div>
-
+  
 
 
 
@@ -702,16 +702,16 @@ Example:
 
 
 ### `login_slave_ds`
-2.3.15.9 API Error Code
+2.3.15.9 API Error Code  
 Code Description
 400 Execution failed.
 401 Invalid parameter.
-415 message connect failed.
+415 message connect failed.  
 #### Internal API
 <div class="padding-left--md">
-`SYNO.SurveillanceStation.CMS.GetDsStatus`
+`SYNO.SurveillanceStation.CMS.GetDsStatus` 
 </div>
-
+  
 
 
 

@@ -6,7 +6,7 @@ title: ✅ ActiveBackupBusiness
 <!-- -------------------------------------------- -->
 <!-- THIS FILE IS AUTO-GENERATED. DO NOT MODIFY.  -->
 <!-- -------------------------------------------- -->
-
+  
 # ActiveBackupBusiness
 ## Overview
 Active Backup for Business API Implementation.
@@ -38,17 +38,17 @@ This class provides methods to interact with the Active Backup for Business pack
         - Remove version
 ## Methods
 ### `get_settings`
-Get the package settings including certificate information.
-
+Get the package settings including certificate information.  
+  
 #### Internal API
 <div class="padding-left--md">
-`SYNO.ActiveBackup.Setting`
+`SYNO.ActiveBackup.Setting` 
 </div>
-
+  
 #### Returns
 <div class="padding-left--md">
-`dict[str, object]`
-A dictionary containing the current settings.
+`dict[str, object]`  
+A dictionary containing the current settings.  
 
 </div>
 #### Example return
@@ -134,35 +134,35 @@ A dictionary containing the current settings.
 
 
 ### `set_concurrent_devices`
-Set the maximum number of concurrent devices that can be backed up at the same time.
+Set the maximum number of concurrent devices that can be backed up at the same time.  
 :::note
-
- You can run multiple concurrent backup devices, but only up to the maximum limit you set—provided that your NAS's RAM usage does not exceed its limit.
-
+ 
+ You can run multiple concurrent backup devices, but only up to the maximum limit you set—provided that your NAS's RAM usage does not exceed its limit.  
+ 
 :::
 
 :::note
-
- This setting will be effective starting from the next backup.
-
+ 
+ This setting will be effective starting from the next backup.  
+ 
 :::
 
 #### Internal API
 <div class="padding-left--md">
-`SYNO.ActiveBackup.Setting`
+`SYNO.ActiveBackup.Setting` 
 </div>
-
+  
 #### Parameters
 <div class="padding-left--md">
-**_value_** `int`
-Maximum number of concurrent devices.
-
+**_value_** `int`  
+Maximum number of concurrent devices.  
+  
 
 </div>
 #### Returns
 <div class="padding-left--md">
-`dict[str, object]`
-A dictionary containing the result of the operation.
+`dict[str, object]`  
+A dictionary containing the result of the operation.  
 
 </div>
 #### Example return
@@ -181,27 +181,27 @@ A dictionary containing the result of the operation.
 
 
 ### `set_retention_policy_exec_time`
-Set the time of day when the retention policy will be executed.
-
+Set the time of day when the retention policy will be executed.  
+  
 #### Internal API
 <div class="padding-left--md">
-`SYNO.ActiveBackup.Setting`
+`SYNO.ActiveBackup.Setting` 
 </div>
-
+  
 #### Parameters
 <div class="padding-left--md">
-**_hour_** `int`
-Hour in 24-hour format (0 - 23) when the retention policy will be executed.
-
-**_minute_** `int`
-Minute (0 - 59) when the retention policy will be executed
-
+**_hour_** `int`  
+Hour in 24-hour format (0 - 23) when the retention policy will be executed.  
+  
+**_minute_** `int`  
+Minute (0 - 59) when the retention policy will be executed  
+  
 
 </div>
 #### Returns
 <div class="padding-left--md">
-`dict[str, object]`
-A dictionary containing the result of the operation.
+`dict[str, object]`  
+A dictionary containing the result of the operation.  
 
 </div>
 #### Example return
@@ -220,46 +220,46 @@ A dictionary containing the result of the operation.
 
 
 ### `set_traffic_throttle`
-Set the global bandwidth control and IP range bandwidth control.
+Set the global bandwidth control and IP range bandwidth control.  
 :::note
-
- Applies only to PC, Physical Server and NAS devices.
-
+ 
+ Applies only to PC, Physical Server and NAS devices.  
+ 
 :::
 
 :::note
-
- When multiple tasks run simultaneously, the system will evenly distribute the throttled traffic.
-
+ 
+ When multiple tasks run simultaneously, the system will evenly distribute the throttled traffic.  
+ 
 :::
 
 #### Internal API
 <div class="padding-left--md">
-`SYNO.ActiveBackup.Setting`
+`SYNO.ActiveBackup.Setting` 
 </div>
-
+  
 #### Parameters
 <div class="padding-left--md">
-**_traffic_control_** `dict[str, object]`
-Traffic control settings.
-Defaults to `{ 'enable': False, 'bandwidth': 0 }` (disable traffic throttling).
-Bandwidth should be specified in MB/s.
-
-**_ip_range_** `list[str]`
-If specified, traffic control will only be applied to this IP range.
-Defaults to `["", ""]` (disable IP range bandwidth control).
-First index should contain the IP range start, second index the IP range end. Only supports IPv4 format.
+**_traffic_control_** `dict[str, object]`  
+Traffic control settings.  
+Defaults to `{ 'enable': False, 'bandwidth': 0 }` (disable traffic throttling).  
+Bandwidth should be specified in MB/s.  
+  
+**_ip_range_** `list[str]`  
+If specified, traffic control will only be applied to this IP range.  
+Defaults to `["", ""]` (disable IP range bandwidth control).  
+First index should contain the IP range start, second index the IP range end. Only supports IPv4 format.  
 Example:
 ```python
 ["192.168.0.1", "192.168.0.10"]
-```
-
+```  
+  
 
 </div>
 #### Returns
 <div class="padding-left--md">
-`dict[str, object]`
-A dictionary containing the result of the operation.
+`dict[str, object]`  
+A dictionary containing the result of the operation.  
 
 </div>
 #### Example return
@@ -278,24 +278,24 @@ A dictionary containing the result of the operation.
 
 
 ### `set_use_pkg_cert`
-Set whether to use the self signed certificate provided by the package.
-
+Set whether to use the self signed certificate provided by the package.  
+  
 #### Internal API
 <div class="padding-left--md">
-`SYNO.ActiveBackup.Setting`
+`SYNO.ActiveBackup.Setting` 
 </div>
-
+  
 #### Parameters
 <div class="padding-left--md">
-**_use_package_cert_** `bool`
-Use the certificate provided by the package.
-
+**_use_package_cert_** `bool`  
+Use the certificate provided by the package.  
+  
 
 </div>
 #### Returns
 <div class="padding-left--md">
-`dict[str, object]`
-A dictionary containing the result of the operation.
+`dict[str, object]`  
+A dictionary containing the result of the operation.  
 
 </div>
 #### Example return
@@ -314,17 +314,17 @@ A dictionary containing the result of the operation.
 
 
 ### `list_vm_hypervisor`
-Get a list of all configured hypervisors present in ABB.
-
+Get a list of all configured hypervisors present in ABB.  
+  
 #### Internal API
 <div class="padding-left--md">
-`SYNO.ActiveBackup.Inventory`
+`SYNO.ActiveBackup.Inventory` 
 </div>
-
+  
 #### Returns
 <div class="padding-left--md">
-`dict[str, object]`
-A dictionary containing a list of hypervisors.
+`dict[str, object]`  
+A dictionary containing a list of hypervisors.  
 
 </div>
 
@@ -334,27 +334,27 @@ A dictionary containing a list of hypervisors.
 
 
 ### `list_device_transfer_size`
-Get a list of all devices and their respective transfer size for the given time frame.
-
+Get a list of all devices and their respective transfer size for the given time frame.  
+  
 #### Internal API
 <div class="padding-left--md">
-`SYNO.ActiveBackup.Overview`
+`SYNO.ActiveBackup.Overview` 
 </div>
-
+  
 #### Parameters
 <div class="padding-left--md">
-**_time_start_** `int`
-Time window start time. Format must be epoch date in seconds. Defaults to 24 hours ago.
-
-**_time_end_** `int`
-Time window end time. Format must be epoch date in seconds. Defaults to current time.
-
+**_time_start_** `int`  
+Time window start time. Format must be epoch date in seconds. Defaults to 24 hours ago.  
+  
+**_time_end_** `int`  
+Time window end time. Format must be epoch date in seconds. Defaults to current time.  
+  
 
 </div>
 #### Returns
 <div class="padding-left--md">
-`dict[str, object]`
-A dictionary containing a list of devices and their transfer size.
+`dict[str, object]`  
+A dictionary containing a list of devices and their transfer size.  
 
 </div>
 #### Example return
@@ -470,58 +470,58 @@ A dictionary containing a list of devices and their transfer size.
 
 
 ### `list_tasks`
-Get information of one or all tasks.
-
+Get information of one or all tasks.  
+  
 #### Internal API
 <div class="padding-left--md">
-`SYNO.ActiveBackup.Task`
+`SYNO.ActiveBackup.Task` 
 </div>
-
+  
 #### Parameters
 <div class="padding-left--md">
-**_task_id_** `int`
-Get information of specific task. Defaults to `-1` (all tasks)
-
-**_backup_type_** `str`
-Return only tasks matching the device type provided. Defaults to `""` (all device types).
+**_task_id_** `int`  
+Get information of specific task. Defaults to `-1` (all tasks)  
+  
+**_backup_type_** `str`  
+Return only tasks matching the device type provided. Defaults to `""` (all device types).  
 Possible values:
 - `"vm"`
 - `"pc"`
 - `"physical_server"`
 - `"file_server"`
-- `"nas"`
+- `"nas"`  
 
-Note that values are different when returned by the API.
+Note that values are different when returned by the API.  
 Return values mappings:
 - `1` -> `vm`
 - `2` -> `pc`
 - `3` -> `physical_server`
 - `4` -> `file_server`
-- `5` -> `nas`
-
-**_status_** `str`
-Return only tasks matching the status provided. Defaults to `""` (all status).
+- `5` -> `nas`  
+  
+**_status_** `str`  
+Return only tasks matching the status provided. Defaults to `""` (all status).  
 Possible values:
 - `"backingup"`
 - `"waiting"`
 - `"deleting"`
-- `"unscheduled"`
-
-**_from_date_** `int`
-Only include tasks for which last backup is greater or equal to this date. Format must be epoch date in seconds. Defaults to `0` (no time limit).
-
-**_to_date_** `int`
-Only include tasks for which last backup is less or equal to this date. Format must be epoch date in seconds. Defaults to `0` (no time limit).
-
-**_include_versions_** `bool`
-Include versions information in the response. Defaults to `False`.
-
+- `"unscheduled"`  
+  
+**_from_date_** `int`  
+Only include tasks for which last backup is greater or equal to this date. Format must be epoch date in seconds. Defaults to `0` (no time limit).  
+  
+**_to_date_** `int`  
+Only include tasks for which last backup is less or equal to this date. Format must be epoch date in seconds. Defaults to `0` (no time limit).  
+  
+**_include_versions_** `bool`  
+Include versions information in the response. Defaults to `False`.  
+  
 
 </div>
 #### Returns
 <div class="padding-left--md">
-`dict[str, object]`
-Dictionary containing a list of tasks.
+`dict[str, object]`  
+Dictionary containing a list of tasks.  
 
 </div>
 #### Example return
@@ -711,52 +711,52 @@ Dictionary containing a list of tasks.
 
 
 ### `list_logs`
-Get logs from the package, tasks and devices. From `[Activities -> Log]` screen in ABB.
-For specific task logs `[Task List -> Details -> Log]`, specify `task_id` parameter.
+Get logs from the package, tasks and devices. From `[Activities -> Log]` screen in ABB.  
+For specific task logs `[Task List -> Details -> Log]`, specify `task_id` parameter.  
 #### Internal API
 <div class="padding-left--md">
-`SYNO.ActiveBackup.Log`
+`SYNO.ActiveBackup.Log` 
 </div>
-
+  
 #### Parameters
 <div class="padding-left--md">
-**_task_id_** `int`
-Get logs of specific task. Defaults to `-1` (all logs - package/tasks/devices)
-
-**_log_level_** `str`
-Type of logs to return. Defaults to `""` (all types).
+**_task_id_** `int`  
+Get logs of specific task. Defaults to `-1` (all logs - package/tasks/devices)  
+  
+**_log_level_** `str`  
+Type of logs to return. Defaults to `""` (all types).  
 Possible values:
 - `"error"`
 - `"warning"`
-- `"information"`
+- `"information"`  
 
-Note that values are different when returned by the API.
+Note that values are different when returned by the API.  
 Return values mappings:
 - 0 -> `error`
 - 1 -> `warning`
-- 2 -> `information`
-
-**_keyword_** `str`
-Keyword used to filter the results. Defaults to `""`.
-
-**_from_date_** `int`
-Date from which the results will start. Format must be epoch date in seconds. Defaults to `0` (no time limit).
-
-**_to_date_** `int`
-Date until which the results will start. Format must be epoch date in seconds. Defaults to `0` (no time limit).
-
-**_offset_** `int`
-Offset results by this value. Defaults to `0`.
-
-**_limit_** `int`
-Amount of results to be returned. Defaults to `200`.
-
+- 2 -> `information`  
+  
+**_keyword_** `str`  
+Keyword used to filter the results. Defaults to `""`.  
+  
+**_from_date_** `int`  
+Date from which the results will start. Format must be epoch date in seconds. Defaults to `0` (no time limit).  
+  
+**_to_date_** `int`  
+Date until which the results will start. Format must be epoch date in seconds. Defaults to `0` (no time limit).  
+  
+**_offset_** `int`  
+Offset results by this value. Defaults to `0`.  
+  
+**_limit_** `int`  
+Amount of results to be returned. Defaults to `200`.  
+  
 
 </div>
 #### Returns
 <div class="padding-left--md">
-`dict[str, object]`
-Dictionary containing a list of logs.
+`dict[str, object]`  
+Dictionary containing a list of logs.  
 
 </div>
 #### Example return
@@ -802,52 +802,52 @@ Dictionary containing a list of logs.
 
 
 ### `task_history`
-Return the history of task execution.
-
+Return the history of task execution.  
+  
 #### Internal API
 <div class="padding-left--md">
-`SYNO.ActiveBackup.Log`
+`SYNO.ActiveBackup.Log` 
 </div>
-
+  
 #### Parameters
 <div class="padding-left--md">
-**_task_id_** `int`
-Get logs of specific task. Defaults to `-1` (all tasks)
-
-**_status_** `str`
-Return only tasks matching the status provided. Defaults to `""` (all status).
+**_task_id_** `int`  
+Get logs of specific task. Defaults to `-1` (all tasks)  
+  
+**_status_** `str`  
+Return only tasks matching the status provided. Defaults to `""` (all status).  
 Possible values:
 - `"success"`
 - `"partial_success"`
 - `"fail"`
-- `"cancel"`
+- `"cancel"`  
 
-Note that values are different when returned by the API.
+Note that values are different when returned by the API.  
 Return values mappings:
 - `2` -> `success`
 - `3` -> `partial_success`
 - `4` -> `fail`
-- `5` -> `cancel`
-
-**_backup_type_** `str`
-Return only tasks matching the device type provided. Defaults to `""` (all device types).
+- `5` -> `cancel`  
+  
+**_backup_type_** `str`  
+Return only tasks matching the device type provided. Defaults to `""` (all device types).  
 Possible values:
 - `"vm"`
 - `"pc"`
 - `"physical_server"`
 - `"file_server"`
-- `"nas"`
+- `"nas"`  
 
-Note that values are different when returned by the API.
+Note that values are different when returned by the API.  
 Return values mappings:
 - `1` -> `vm`
 - `2` -> `pc`
 - `3` -> `physical_server`
 - `4` -> `file_server`
-- `5` -> `nas`
-
-**_action_type_** `str`
-Return only tasks matching the task type provided. Defaults to `""` (all task types).
+- `5` -> `nas`  
+  
+**_action_type_** `str`  
+Return only tasks matching the task type provided. Defaults to `""` (all task types).  
 Possible values:
 - `"backup"`
 - `"dedup_data"`
@@ -857,9 +857,9 @@ Possible values:
 - `"delete_version"`
 - `"delete_host"`
 - `"relink"`
-- `"create_task"`
+- `"create_task"`  
 
-Note that values are different when returned by the API.
+Note that values are different when returned by the API.  
 Return values mappings:
 - `1` -> `backup`
 - `1048576` -> `dedup_data`
@@ -869,29 +869,29 @@ Return values mappings:
 - `131072` -> `delete_version`
 - `262144` -> `delete_host`
 - `2097152` -> `relink`
-- `268435456` -> `create_task`
-
-**_keyword_** `str`
-Keyword used to filter the results. Defaults to `""`.
-
-**_from_date_** `int`
-Date from which the results will start. Format must be epoch date in seconds. Defaults to `0` (no time limit).
-
-**_to_date_** `int`
-Date until which the results will start. Format must be epoch date in seconds. Defaults to `0` (no time limit).
-
-**_offset_** `int`
-Offset results by this value. Defaults to `0`.
-
-**_limit_** `int`
-Amount of results to be returned. Defaults to `200`.
-
+- `268435456` -> `create_task`  
+  
+**_keyword_** `str`  
+Keyword used to filter the results. Defaults to `""`.  
+  
+**_from_date_** `int`  
+Date from which the results will start. Format must be epoch date in seconds. Defaults to `0` (no time limit).  
+  
+**_to_date_** `int`  
+Date until which the results will start. Format must be epoch date in seconds. Defaults to `0` (no time limit).  
+  
+**_offset_** `int`  
+Offset results by this value. Defaults to `0`.  
+  
+**_limit_** `int`  
+Amount of results to be returned. Defaults to `200`.  
+  
 
 </div>
 #### Returns
 <div class="padding-left--md">
-`dict[str, object]`
-Dictionary containing a list of results.
+`dict[str, object]`  
+Dictionary containing a list of results.  
 
 </div>
 #### Example return
@@ -937,39 +937,39 @@ Dictionary containing a list of results.
 
 
 ### `result_details`
-Get details of a task result log. `result_id` can be retrieved from `list_logs()` function.
-
+Get details of a task result log. `result_id` can be retrieved from `list_logs()` function.  
+  
 #### Internal API
 <div class="padding-left--md">
-`SYNO.ActiveBackup.Log`
+`SYNO.ActiveBackup.Log` 
 </div>
-
+  
 #### Parameters
 <div class="padding-left--md">
-**_result_id_** `int`
-ID of the result to get details from.
-
-**_limit_** `int`
-Amount of results to be returned. Defaults to `500`.
-
-**_order_by_** `str`
-What to order the results by. Defaults to `"log_level"`.
+**_result_id_** `int`  
+ID of the result to get details from.  
+  
+**_limit_** `int`  
+Amount of results to be returned. Defaults to `500`.  
+  
+**_order_by_** `str`  
+What to order the results by. Defaults to `"log_level"`.  
 Possible values:
 - `"log_level"`
-- `"log_time"`
-
-**_direction_** `str`
-Direction of the order. Defaults to `"ASC"`.
+- `"log_time"`  
+  
+**_direction_** `str`  
+Direction of the order. Defaults to `"ASC"`.  
 Possible values:
 - `"ASC"`
-- `"DESC"`
-
+- `"DESC"`  
+  
 
 </div>
 #### Returns
 <div class="padding-left--md">
-`dict[str, object]`
-Dictionary containing a list of result details.
+`dict[str, object]`  
+Dictionary containing a list of result details.  
 
 </div>
 #### Example return
@@ -1021,17 +1021,17 @@ Dictionary containing a list of result details.
 
 
 ### `list_storage`
-Get a list of all storage devices present in ABB.
-
+Get a list of all storage devices present in ABB.  
+  
 #### Internal API
 <div class="padding-left--md">
-`SYNO.ActiveBackup.Share`
+`SYNO.ActiveBackup.Share` 
 </div>
-
+  
 #### Returns
 <div class="padding-left--md">
-`dict[str, object]`
-A dictionary containing a list of storage devices.
+`dict[str, object]`  
+A dictionary containing a list of storage devices.  
 
 </div>
 #### Example return
@@ -1093,25 +1093,25 @@ A dictionary containing a list of storage devices.
 
 
 ### `backup_task_run`
-Trigger a backup event for the given tasks.
-
+Trigger a backup event for the given tasks.  
+  
 #### Internal API
 <div class="padding-left--md">
-`SYNO.ActiveBackup.Task`
+`SYNO.ActiveBackup.Task` 
 </div>
-
+  
 #### Parameters
 <div class="padding-left--md">
-**_task_ids_** `list[int]`
-List of task IDs to trigger the backup event.
-Even if only one task is specified, a list has to be passed as argument.
-
+**_task_ids_** `list[int]`  
+List of task IDs to trigger the backup event.  
+Even if only one task is specified, a list has to be passed as argument.  
+  
 
 </div>
 #### Returns
 <div class="padding-left--md">
-`dict[str, object]`
-Dictionary containing the result of the operation.
+`dict[str, object]`  
+Dictionary containing the result of the operation.  
 
 </div>
 #### Example return
@@ -1130,25 +1130,25 @@ Dictionary containing the result of the operation.
 
 
 ### `backup_task_cancel`
-Cancel specified ongoing task.
-
+Cancel specified ongoing task.  
+  
 #### Internal API
 <div class="padding-left--md">
-`SYNO.ActiveBackup.Task`
+`SYNO.ActiveBackup.Task` 
 </div>
-
+  
 #### Parameters
 <div class="padding-left--md">
-**_task_ids_** `list[int]`
-List of task IDs to trigger the cancellation event.
-Even if only one task is specified, a list has to be passed as argument.
-
+**_task_ids_** `list[int]`  
+List of task IDs to trigger the cancellation event.  
+Even if only one task is specified, a list has to be passed as argument.  
+  
 
 </div>
 #### Returns
 <div class="padding-left--md">
-`dict[str, object]`
-Dictionary containing the result of the operation.
+`dict[str, object]`  
+Dictionary containing the result of the operation.  
 
 </div>
 #### Example return
@@ -1167,30 +1167,30 @@ Dictionary containing the result of the operation.
 
 
 ### `backup_task_remove`
-Remove the given tasks from ABB.
+Remove the given tasks from ABB.  
 :::warning
-
- This will remove the task and all its versions from the NAS. The backed up data will not be preserved after this operation.
-
+ 
+ This will remove the task and all its versions from the NAS. The backed up data will not be preserved after this operation.  
+ 
 :::
 
 #### Internal API
 <div class="padding-left--md">
-`SYNO.ActiveBackup.Task`
+`SYNO.ActiveBackup.Task` 
 </div>
-
+  
 #### Parameters
 <div class="padding-left--md">
-**_task_ids_** `list[int]`
-List of task IDs to remove.
-Even if only one task is specified, a list has to be passed as argument.
-
+**_task_ids_** `list[int]`  
+List of task IDs to remove.  
+Even if only one task is specified, a list has to be passed as argument.  
+  
 
 </div>
 #### Returns
 <div class="padding-left--md">
-`dict[str, object]`
-Dictionary containing the result of the operation.
+`dict[str, object]`  
+Dictionary containing the result of the operation.  
 
 </div>
 #### Example return
@@ -1209,32 +1209,32 @@ Dictionary containing the result of the operation.
 
 
 ### `backup_task_delete_versions`
-Delete the specified versions from a task.
+Delete the specified versions from a task.  
 :::warning
-
- This will remove the specified versions from the NAS. The corresponding versions data will not be preserved after this operation.
-
+ 
+ This will remove the specified versions from the NAS. The corresponding versions data will not be preserved after this operation.  
+ 
 :::
 
 #### Internal API
 <div class="padding-left--md">
-`SYNO.ActiveBackup.Version`
+`SYNO.ActiveBackup.Version` 
 </div>
-
+  
 #### Parameters
 <div class="padding-left--md">
-**_task_id_** `int`
-Task ID from which to delete the versions.
-
-**_versions_ids_** `list[int]`
-List of version IDs to delete.
-
+**_task_id_** `int`  
+Task ID from which to delete the versions.  
+  
+**_versions_ids_** `list[int]`  
+List of version IDs to delete.  
+  
 
 </div>
 #### Returns
 <div class="padding-left--md">
-`dict[str, object]`
-Dictionary containing the result of the operation.
+`dict[str, object]`  
+Dictionary containing the result of the operation.  
 
 </div>
 #### Example return

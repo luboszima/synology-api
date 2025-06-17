@@ -6,40 +6,40 @@ title: 🚧 Package
 <!-- -------------------------------------------- -->
 <!-- THIS FILE IS AUTO-GENERATED. DO NOT MODIFY.  -->
 <!-- -------------------------------------------- -->
-
+  
 # Package
 :::warning
-
+ 
 This API is partially documented or under construction.
-
+ 
 :::
 ## Overview
 Core Package API implementation.
 ## Methods
 ### `get_package`
-Get infos of a package
-
+Get infos of a package  
+  
 #### Internal API
 <div class="padding-left--md">
-`SYNO.Core.Package`
+`SYNO.Core.Package` 
 </div>
-
+  
 #### Parameters
 <div class="padding-left--md">
-**_package_id_** `str`
-Package ID
-
-**_additional_** `List[str]`
+**_package_id_** `str`  
+Package ID  
+  
+**_additional_** `List[str]`  
 Additional field to retrieves. Defaults to `[]`
 All filed known are:
-`["status","dsm_apps"]`
-
+`["status","dsm_apps"]`  
+  
 
 </div>
 #### Returns
 <div class="padding-left--md">
-`dict`
-Informations about the package
+`dict`  
+Informations about the package  
 
 </div>
 #### Example return
@@ -71,33 +71,33 @@ Informations about the package
 
 
 ### `list_installed`
-List installed packages
-
+List installed packages  
+  
 #### Internal API
 <div class="padding-left--md">
-`SYNO.Core.Package`
+`SYNO.Core.Package` 
 </div>
-
+  
 #### Parameters
 <div class="padding-left--md">
-**_additional_** `list[str]`
+**_additional_** `list[str]`  
 Additional fields to retrieve. Defaults to `[]`.
 All fields known are:
     `["description", "description_enu", "dependent_packages", "beta", "distributor", "distributor_url",
     "maintainer", "maintainer_url", "dsm_apps", "dsm_app_page", "dsm_app_launch_name","report_beta_url",
     "support_center", "startable", "installed_info", "support_url", "is_uninstall_pages","install_type",
     "autoupdate", "silent_upgrade", "installing_progress", "ctl_uninstall", "updated_at", "status",
-    "url","available_operation"]`.
-
-**_ignore_hidden_** `bool`
-TODO: Write description
-
+    "url","available_operation"]`.  
+  
+**_ignore_hidden_** `bool`  
+TODO: Write description  
+  
 
 </div>
 #### Returns
 <div class="padding-left--md">
-`dict`
-List of packages installed on the NAS
+`dict`  
+List of packages installed on the NAS  
 
 </div>
 #### Example return
@@ -129,17 +129,17 @@ List of packages installed on the NAS
 
 
 ### `list_installable`
-List installable packages
-
+List installable packages  
+  
 #### Internal API
 <div class="padding-left--md">
-`SYNO.Core.Package.Server`
+`SYNO.Core.Package.Server` 
 </div>
-
+  
 #### Returns
 <div class="padding-left--md">
-`dict`
-List of beta_package, categories and packages available
+`dict`  
+List of beta_package, categories and packages available  
 
 </div>
 #### Example return
@@ -164,17 +164,17 @@ List of beta_package, categories and packages available
 
 
 ### `get_package_center_settings`
-Get package center settings
-
+Get package center settings  
+  
 #### Internal API
 <div class="padding-left--md">
-`SYNO.Core.Package.Setting`
+`SYNO.Core.Package.Setting` 
 </div>
-
+  
 #### Returns
 <div class="padding-left--md">
-`dict`
-List settings of the Package center
+`dict`  
+List settings of the Package center  
 
 </div>
 #### Example return
@@ -225,43 +225,43 @@ List settings of the Package center
 
 
 ### `set_package_center_settings`
-Set settings of the package center
-
+Set settings of the package center  
+  
 #### Internal API
 <div class="padding-left--md">
-`SYNO.Core.Package.Setting`
+`SYNO.Core.Package.Setting` 
 </div>
-
+  
 #### Parameters
 <div class="padding-left--md">
-**_enable_email_** `bool`
-Enable email notification
-
-**_enable_dsm_** `bool `
-Enable desktop notification
-
-**_enable_autoupdate_** `bool`
-Update packages automatically
-
-**_autoupdateall_** `bool`
-Auto update all packages
-
-**_autoupdateimportant_** `bool`
-Auto update "important" packages
-
-**_default_vol_** `str`
-Default volume for installation, all your volumes or `"no_default_vol" = Always ask me`
-
-**_udpate_channel_** `str`
+**_enable_email_** `bool`  
+Enable email notification  
+  
+**_enable_dsm_** `bool`  
+Enable desktop notification  
+  
+**_enable_autoupdate_** `bool`  
+Update packages automatically  
+  
+**_autoupdateall_** `bool`  
+Auto update all packages  
+  
+**_autoupdateimportant_** `bool`  
+Auto update "important" packages  
+  
+**_default_vol_** `str`  
+Default volume for installation, all your volumes or `"no_default_vol" = Always ask me`  
+  
+**_udpate_channel_** `str`  
 "stable" => Disable beta packages
-"beta" => Enable beta packages
-
+"beta" => Enable beta packages  
+  
 
 </div>
 #### Returns
 <div class="padding-left--md">
-`dict`
-Return some settings
+`dict`  
+Return some settings  
 
 </div>
 #### Example return
@@ -285,17 +285,17 @@ Return some settings
 
 
 ### `get_package_center_infos`
-Get package center informations
-
+Get package center informations  
+  
 #### Internal API
 <div class="padding-left--md">
-`SYNO.Core.Package.Info`
+`SYNO.Core.Package.Info` 
 </div>
-
+  
 #### Returns
 <div class="padding-left--md">
-`dict`
-List of configs
+`dict`  
+List of configs  
 
 </div>
 
@@ -305,24 +305,24 @@ List of configs
 
 
 ### `feasibility_check_install`
-Check if installation is possible
-
+Check if installation is possible  
+  
 #### Internal API
 <div class="padding-left--md">
-`SYNO.Core.Package.Setting`
+`SYNO.Core.Package.Setting` 
 </div>
-
+  
 #### Parameters
 <div class="padding-left--md">
-**_packages_** `List[str]`
-List of package IDs to check for feasibility
-
+**_packages_** `List[str]`  
+List of package IDs to check for feasibility  
+  
 
 </div>
 #### Returns
 <div class="padding-left--md">
-`dict`
-_description_
+`dict`  
+_description_  
 
 </div>
 #### Example return
@@ -344,33 +344,33 @@ _description_
 
 
 ### `download_package`
-Start download of the package, return a taskId for check status
-
+Start download of the package, return a taskId for check status  
+  
 #### Internal API
 <div class="padding-left--md">
-`SYNO.Core.Package.Installation`
+`SYNO.Core.Package.Installation` 
 </div>
-
+  
 #### Parameters
 <div class="padding-left--md">
-**_url_** `str`
-Url that can be retrieve from package info using `get_installable` function, in the `link` field
-
-**_package_id_** `str`
-Package ID that can be retrieve from package info using `get_installable` function, in the `id` field
-
-**_checksum_** `str`
-Checksum that can be retrieve from package info using `get_installable` function, in the `md5` field
-
-**_filesize_** `str`
-Filesize that can be retrieve from package info using `get_installable` function, in the `size` field
-
+**_url_** `str`  
+Url that can be retrieve from package info using `get_installable` function, in the `link` field  
+  
+**_package_id_** `str`  
+Package ID that can be retrieve from package info using `get_installable` function, in the `id` field  
+  
+**_checksum_** `str`  
+Checksum that can be retrieve from package info using `get_installable` function, in the `md5` field  
+  
+**_filesize_** `str`  
+Filesize that can be retrieve from package info using `get_installable` function, in the `size` field  
+  
 
 </div>
 #### Returns
 <div class="padding-left--md">
-`dict`
-Retreive first progress of the download and the taskid used to check download status with `get_dowload_package_status` function
+`dict`  
+Retreive first progress of the download and the taskid used to check download status with `get_dowload_package_status` function  
 
 </div>
 #### Example return
@@ -393,24 +393,24 @@ Retreive first progress of the download and the taskid used to check download st
 
 
 ### `get_dowload_package_status`
-Get current download status of the package
-
+Get current download status of the package  
+  
 #### Internal API
 <div class="padding-left--md">
-`SYNO.Core.Package.Installation`
+`SYNO.Core.Package.Installation` 
 </div>
-
+  
 #### Parameters
 <div class="padding-left--md">
-**_task_id_** `str`
-task ID retrieve from response of `download_package` function
-
+**_task_id_** `str`  
+task ID retrieve from response of `download_package` function  
+  
 
 </div>
 #### Returns
 <div class="padding-left--md">
-`dict`
-Retrieve informations about the download, important info is the `progress` field
+`dict`  
+Retrieve informations about the download, important info is the `progress` field  
 
 </div>
 #### Example return
@@ -444,24 +444,24 @@ Retrieve informations about the download, important info is the `progress` field
 
 
 ### `check_installation_from_download`
-Get info about downloaded package file, response field is used for `check_installation` and `install_package` function
-
+Get info about downloaded package file, response field is used for `check_installation` and `install_package` function  
+  
 #### Internal API
 <div class="padding-left--md">
-`SYNO.Core.Package.Installation.Download`
+`SYNO.Core.Package.Installation.Download` 
 </div>
-
+  
 #### Parameters
 <div class="padding-left--md">
-**_task_id_** `str`
-task ID retrieve from response of `download_package` function
-
+**_task_id_** `str`  
+task ID retrieve from response of `download_package` function  
+  
 
 </div>
 #### Returns
 <div class="padding-left--md">
-`dict`
-Retrieve information about downloaded package installation file, response field is used for `check_installation` and `install_package` function
+`dict`  
+Retrieve information about downloaded package installation file, response field is used for `check_installation` and `install_package` function  
 
 </div>
 #### Example return
@@ -498,36 +498,36 @@ Retrieve information about downloaded package installation file, response field 
 
 
 ### `upload_package_file`
-Upload a file for install a package
-
+Upload a file for install a package  
+  
 #### Internal API
 <div class="padding-left--md">
-`SYNO.Core.Package.Installation`
+`SYNO.Core.Package.Installation` 
 </div>
-
+  
 #### Parameters
 <div class="padding-left--md">
-**_file_path_** `str`
-File path
-
-**_verify_** `bool`
-Use https. Defaults to `False`
-
-**_progress_bar_** `bool`
-Enable progress bar in the terminal. Defaults to `True`
-
-**_additional_** `list`
+**_file_path_** `str`  
+File path  
+  
+**_verify_** `bool`  
+Use https. Defaults to `False`  
+  
+**_progress_bar_** `bool`  
+Enable progress bar in the terminal. Defaults to `True`  
+  
+**_additional_** `list`  
 Additional field to retrieves. Defaults to `[]`
 All fields know are:
 `["description","maintainer","distributor","startable","dsm_apps","status","install_reboot",
-"install_type","install_on_cold_storage","break_pkgs","replace_pkgs"]`.
-
+"install_type","install_on_cold_storage","break_pkgs","replace_pkgs"]`.  
+  
 
 </div>
 #### Returns
 <div class="padding-left--md">
-`dict`
-Informations about the uploaded file for installation
+`dict`  
+Informations about the uploaded file for installation  
 
 </div>
 #### Example return
@@ -569,17 +569,17 @@ Informations about the uploaded file for installation
 
 
 ### `get_default_install_volume`
-Get default install volume for package
-
+Get default install volume for package  
+  
 #### Internal API
 <div class="padding-left--md">
-`SYNO.Core.Package.Setting.Volume`
+`SYNO.Core.Package.Setting.Volume` 
 </div>
-
+  
 #### Returns
 <div class="padding-left--md">
-`dict`
-Return default volume, if default volume is set to `Always ask me` it return error 4501
+`dict`  
+Return default volume, if default volume is set to `Always ask me` it return error 4501  
 
 </div>
 #### Example return
@@ -601,36 +601,36 @@ Return default volume, if default volume is set to `Always ask me` it return err
 
 
 ### `check_installation`
-Check installation of the package on the default volume
-
+Check installation of the package on the default volume  
+  
 #### Internal API
 <div class="padding-left--md">
-`SYNO.Core.Package.Installation`
+`SYNO.Core.Package.Installation` 
 </div>
-
+  
 #### Parameters
 <div class="padding-left--md">
-**_package_id_** `str`
-Id of the package to install
-
-**_install_type_** `str, optionnal`
-Installation type, Defaults to `""`. TODO: Add description and possible types
-
-**_install_on_cold_storage_** `bool`
-Defaults to `False`. TODO: Add description
-
-**_blCheckDep_** `bool`
-Defaults to `False`. TODO: Add description
-
-**_replacepkgs_** `dict`
-Defaults to `{}`. TODO: Add description
-
+**_package_id_** `str`  
+Id of the package to install  
+  
+**_install_type_** `str, optionnal`  
+Installation type, Defaults to `""`. TODO: Add description and possible types  
+  
+**_install_on_cold_storage_** `bool`  
+Defaults to `False`. TODO: Add description  
+  
+**_blCheckDep_** `bool`  
+Defaults to `False`. TODO: Add description  
+  
+**_replacepkgs_** `dict`  
+Defaults to `{}`. TODO: Add description  
+  
 
 </div>
 #### Returns
 <div class="padding-left--md">
-`dict`
-List of usefull informations about volumes
+`dict`  
+List of usefull informations about volumes  
 
 </div>
 #### Example return
@@ -674,104 +674,28 @@ List of usefull informations about volumes
 
 
 ### `upgrade_package`
-Upgrade an existing package
-Parameters
-            ----------
-            task_id : str
-                Task id of the download or the upload file
-            check_codesign : bool, optional
-                Check signature of the source code of the package (is it a Synology one). Defaults to `False`
-            force : bool, optional
-                Force installation. Defaults to `False`
-            installrunpackage : bool, optional
-                Run package after installation. Defaults to `True`
-            extra_values : dict, optional
-                Extra values due to some package installation. Defaults to `{}`
-                All known extra values are:
-                - Surveillance station
-                ```json
-                    {
-                        "chkSVS_Alias": true,
-                        "strSVS_Alias": "cam",
-                        "chkSVS_HTTP": true,
-                        "strSVS_HTTP": "9900",
-                        "chkSVS_HTTPS": true,
-                        "strSVS_HTTPS": "9901"
-                    }
-                ```
-
-            Returns
-            -------
-            dict
-                Message and some info about installation
-
-            Example return
-            ----------
-            ```json
-            {
-                "data": {
-                    "message": "<br><strong><p style='color:blue'><big><b>Installation Successful!</big></p>
-<br><p style='color:blue'>:::note
-
- If Plex cannot access your media, verify user <strong>PlexMediaServer</strong> is granted permission in <strong>Control Panel</strong>.</p><br>
-
-:::
-
-Set access to your media share(s) by performing the following steps:<br><br>
-1. Open <strong>Control Panel</strong> and select <strong>Shared Folder</strong><br>
-2. Select the share which contains your media and click <strong>Edit</strong><br>
-3. Click the <strong>Permissions</strong> tab<br>
-4. Change the dropdown from <strong>Local Users</strong> to <strong>System internal user</strong><br>
-5. Check the <strong>Read/Write</strong> checkbox for the <strong>PlexMediaServer</strong> user<br>
-6. Click <strong>Save</strong> to confirm the new permissions<br>
-7. Repeat steps 2-6 for each share you want Plex Media Server to access<br>
-",
-                    "packageName": "Plex Media Server",
-                    "worker_message": []
-                },
-                "success": true,
-            }
-            ```
+Upgrade an existing package  
+  
 #### Internal API
 <div class="padding-left--md">
-`SYNO.Core.Package.Installation`
+`SYNO.Core.Package.Installation` 
 </div>
-
-
-
-
----
-
-
-### `install_package`
-Install a package that is already downloaded
-
-#### Internal API
-<div class="padding-left--md">
-`SYNO.Core.Package.Uninstallation`
-</div>
-
+  
 #### Parameters
 <div class="padding-left--md">
-**_package_id_** `str`
-Id of the package to install
-
-**_volume_path_** `str`
-Volume path of the installation, can get from `check_installation` function
-
-**_file_path_** `str`
-File path of the installation, can get from `check_installation_from_download` function
-
-**_check_codesign_** `bool`
-Check signature of the source code of the package (is it a Synology one). Defaults to `False`
-
-**_force_** `bool`
-Force installation. Defaults to `False`
-
-**_installrunpackage_** `bool`
-Run package after installation. Defaults to `True`
-
-**_extra_values_** `dict`
+**_task_id_** `str`  
+Task id of the download or the upload file  
+  
+**_check_codesign_** `bool`  
+Check signature of the source code of the package (is it a Synology one). Defaults to `False`  
+  
+**_force_** `bool`  
+Force installation. Defaults to `False`  
+  
+**_installrunpackage_** `bool`  
+Run package after installation. Defaults to `True`  
+  
+**_extra_values_** `dict`  
 Extra values due to some package installation. Defaults to `{}`
 All known extra values are:
 - Surveillance station
@@ -784,14 +708,85 @@ All known extra values are:
         "chkSVS_HTTPS": true,
         "strSVS_HTTPS": "9901"
     }
-```
-
+```  
+  
 
 </div>
 #### Returns
 <div class="padding-left--md">
-`dict`
-Message and some info about installation
+`dict`  
+Message and some info about installation  
+
+</div>
+#### Example return
+<details>
+<summary>Click to expand</summary>
+```json
+{
+    "data": {
+        "message": "message",
+        "packageName": "Plex Media Server",
+        "worker_message": []
+    },
+    "success": true,
+}
+```
+</details>
+
+
+
+---
+
+
+### `install_package`
+Install a package that is already downloaded  
+  
+#### Internal API
+<div class="padding-left--md">
+`SYNO.Core.Package.Uninstallation` 
+</div>
+  
+#### Parameters
+<div class="padding-left--md">
+**_package_id_** `str`  
+Id of the package to install  
+  
+**_volume_path_** `str`  
+Volume path of the installation, can get from `check_installation` function  
+  
+**_file_path_** `str`  
+File path of the installation, can get from `check_installation_from_download` function  
+  
+**_check_codesign_** `bool`  
+Check signature of the source code of the package (is it a Synology one). Defaults to `False`  
+  
+**_force_** `bool`  
+Force installation. Defaults to `False`  
+  
+**_installrunpackage_** `bool`  
+Run package after installation. Defaults to `True`  
+  
+**_extra_values_** `dict`  
+Extra values due to some package installation. Defaults to `{}`
+All known extra values are:
+- Surveillance station
+```json
+    {
+        "chkSVS_Alias": true,
+        "strSVS_Alias": "cam",
+        "chkSVS_HTTP": true,
+        "strSVS_HTTP": "9900",
+        "chkSVS_HTTPS": true,
+        "strSVS_HTTPS": "9901"
+    }
+```  
+  
+
+</div>
+#### Returns
+<div class="padding-left--md">
+`dict`  
+Message and some info about installation  
 
 </div>
 #### Example return
@@ -856,24 +851,24 @@ Message and some info about installation
 
 
 ### `uninstall_package`
-Uninstall a package
-
+Uninstall a package  
+  
 #### Internal API
 <div class="padding-left--md">
-`SYNO.Core.Package.Uninstallation`
+`SYNO.Core.Package.Uninstallation` 
 </div>
-
+  
 #### Parameters
 <div class="padding-left--md">
-**_package_id_** `str`
-Id of the package to uninstall
-
+**_package_id_** `str`  
+Id of the package to uninstall  
+  
 
 </div>
 #### Returns
 <div class="padding-left--md">
-`dict`
-Possible message to the user
+`dict`  
+Possible message to the user  
 
 </div>
 #### Example return
@@ -896,26 +891,30 @@ Possible message to the user
 
 
 ### `easy_install`
-Execute an "easy" installation process of the package
-
-
+Execute an easy installation process of the package  
+  
+#### Internal API
+<div class="padding-left--md">
+`hotfix` 
+</div>
+  
 #### Parameters
 <div class="padding-left--md">
-**_package_id_** `str`
-Package ID to install
-
-**_volume_path_** `str`
-Volume path where you want to install the package
-
-**_install_dependencies_** `bool`
-If you want to install dependencies. Defaults to `True`
-
+**_package_id_** `str`  
+Package ID to install  
+  
+**_volume_path_** `str`  
+Volume path where you want to install the package  
+  
+**_install_dependencies_** `bool`  
+If you want to install dependencies. Defaults to True  
+  
 
 </div>
 #### Returns
 <div class="padding-left--md">
-`dict`
-Information about installation, same as `install_package` function
+`dict[str, object]`  
+Information about installation, same as install_package function  
 
 </div>
 #### Example return

@@ -6,12 +6,12 @@ title: 🚧 SysInfo
 <!-- -------------------------------------------- -->
 <!-- THIS FILE IS AUTO-GENERATED. DO NOT MODIFY.  -->
 <!-- -------------------------------------------- -->
-
+  
 # SysInfo
 :::warning
-
+ 
 This API is not documented yet.
-
+ 
 :::
 ## Overview
 
@@ -486,13 +486,6 @@ This API is not documented yet.
 
 
 ### `hardware_ups`
-
-
-
----
-
-
-### `hardware_power_schedule`
 
 
 

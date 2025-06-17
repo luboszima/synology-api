@@ -6,12 +6,12 @@ title: 🚧 FileStation
 <!-- -------------------------------------------- -->
 <!-- THIS FILE IS AUTO-GENERATED. DO NOT MODIFY.  -->
 <!-- -------------------------------------------- -->
-
+  
 # FileStation
 :::warning
-
+ 
 This API is not documented yet.
-
+ 
 :::
 ## Overview
 
@@ -346,17 +346,21 @@ This API is not documented yet.
 
 
 ### `generate_file_tree`
-Generate the file tree based on the folder path you give, you need to create the root node before call this function
-
-
+Generate the file tree based on the folder path you give, you need to create the root node before call this function  
+  
+#### Internal API
+<div class="padding-left--md">
+`hotfix` 
+</div>
+  
 #### Parameters
 <div class="padding-left--md">
-**_folder_path_** `str`
-Folder path to generate file tree
-
-**_tree_** `Tree`
-Instance of the Tree of lib "Treelib"
-
+**_folder_path_** `str`  
+Folder path to generate file tree  
+  
+**_tree_** `Tree`  
+Instance of the Tree of lib "Treelib"  
+  
 
 </div>
 
