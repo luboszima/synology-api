@@ -10,7 +10,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: asdf-vm/actions/install@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.9'
       - run: pip install -r requirements.txt
       - name: Get all changed api files
         id: changed-api-files
@@ -28,7 +30,7 @@ jobs:
           for file in ${ALL_CHANGED_FILES}; do
             echo "$file was changed"
 
-            python docs_parser.py -f "$(basename "$file")"
+            python3 docs_parser.py -f "$(basename "$file")"
           done
       - name: Commit & Push changes
         uses: actions-js/push@master
